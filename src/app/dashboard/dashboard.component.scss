@@ -1,0 +1,278 @@
+// @font-face {
+//     font-family: lato;
+//     src: url(assets/fonts/) format("truetype");
+//   }
+$btn-font-color:#1145d7;
+
+.font-exo {
+    font-family: 'Exo', sans-serif;
+    color: white;
+}
+.font-orb {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+}
+
+.koop-btn{
+
+    background-color: white;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-family: 'Orbitron', sans-serif;
+    color: $btn-font-color;
+    user-select: none;
+}
+
+.header{
+    height: 130px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    .logo{
+        height: 100%;
+        width: 500px;
+        user-select: none;
+        cursor: pointer;
+        margin-left: 80px;
+    }
+    .btn-connect-wallet {
+        background-color: white;
+        height: 70px;
+        width: 270px;
+        margin-top: 30px;
+        text-align: center;
+        line-height: 70px;
+        cursor: pointer;
+        border-radius: 50px;
+        font-family: "Orbitron", sans-serif;
+        color: #1145d7;
+        -webkit-user-select: none;
+        user-select: none;
+        margin-left: auto;
+        margin-right: 3%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 22px;
+    }
+}
+.token-info-container{
+    height: 500px;
+    // border: 1px solid gold;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    .token-info-back{
+        background-color: #173148;
+        height: 80%;
+        width: 60%;
+        margin-top: 40px;
+        .token-info-body{
+            margin-left: 12%;
+            margin-top: 5%;
+            .info-title {
+                font-size: 48px;
+                font-weight: 500;
+            }
+            .info{
+                letter-spacing: 4px;
+                margin-top: 25px;
+                font-size: 22px;
+                font-weight: lighter;
+                opacity: .7;
+            }
+            .deposit-btn{
+
+                font-weight: 600;
+                letter-spacing: 1px;
+                font-size: 22px;
+                margin-top: 70px;
+                height: 70px;
+                width: 225px;
+                line-height: 70px;
+            
+            }
+        }
+    }
+    .loader{
+        background-color: black;
+        height: 100%;
+        width: 35%;
+        margin-left: -8%;
+        // margin-right: 200px;
+        transform: skewX(-23deg);
+        border-radius: 27px 20px;
+        .info{
+            transform: skewX(23deg);
+            margin-top: 100px;
+            .amount-info{
+                margin-top: 30px;
+                display: flex;
+                flex-direction: row;
+                font-size: 20px;
+                margin-left: 80px;
+                .amount-figure{
+                    margin-left: auto;
+                    margin-right: 50px;
+                }
+                .days-left{
+
+                    margin-left: auto;
+                    margin-right: 100px;
+                    font-size: 26px;
+                }
+            }
+            .sold-out{
+                margin-top: 100px;
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 3px;
+                /* margin-left: 50%; */
+                /* transform: translate(-50%); */
+                margin-left: -40px;
+                text-align: center;
+            }
+            .progress-bar-container{
+                margin-top: 20px;
+                width: 80%;
+                .amount-progress-bar{
+                    height: 7px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+.please{
+    font-size: 26px;
+    font-weight: bold;
+    margin-left: 7%;
+    margin-top: -35px;
+    letter-spacing: 1px;
+}
+
+.tiers-header{
+    margin-top: 200px;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 1%;
+    .tiers-desc{
+        font-size: 26px;
+        margin-top: 2%;
+        font-weight: 700;
+        width: 800px;
+        letter-spacing: 1.5px;
+        line-height: 40px;
+    }
+    .btn-connect {
+        width: 370px;
+        height: 70px;
+        margin-left: 50%;
+        margin-top: 50px;
+        line-height: 70px;
+        transform: translate(-50%,15px);
+    }
+}
+
+.phase-container {
+    width: 90%;
+    height: 65%;
+    margin-top: 150px;
+    // border: 1px solid gold;
+    transform: translate(-50%);
+    margin-left: 50%;
+    display: flex;
+    flex-direction: row;
+    .phase-desc{
+        font-family: "Exo", sans-serif;
+        color: white;
+        font-size: 20px;
+        width: 45%;
+        margin-top: 3%;
+        line-height: 30px;
+        font-weight: 700;
+        opacity: 0.85;
+    }
+    .phase-video{
+        height: 100%px;
+        width: 70%;
+        video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.phase-1{
+
+    // background-image: url("../assets/phase1-bg.png");
+    // color: #fff;
+    background-image: url("../../assets/phase1-bg.png");  
+    background-size: 100%;
+}
+
+.phase-2{
+
+    // background-image: url("../assets/phase1-bg.png");
+    // color: #fff;
+    background-image: url("../../assets/phase2-bg.png");  
+    background-size: 100%;
+}
+
+.phase-3{
+
+    // background-image: url("../assets/phase1-bg.png");
+    // color: #fff;
+    background-image: url("../../assets/phase3-bg.png");  
+    background-size: 100%;
+}
+
+.phase-4{
+
+    // background-image: url("../assets/phase1-bg.png");
+    // color: #fff;
+    background-image: url("../../assets/phase4-bg.png");  
+    background-size: 100%;
+    margin-bottom: 200px;
+}
+.ml {
+    margin-right: 6%;
+    margin-left: 3%;
+    
+}
+.mr {
+    margin-left: 6%;
+    margin-right: 3%;
+}
+
+.footer{
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    .footer-logo{
+        height: 100%;
+        // width: 100%;
+        margin-left: 20px;
+    }
+    .footer-links{
+        width: 100%;
+        align-items: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 26px;
+        .footer-link{
+            user-select: none;
+            cursor: pointer;
+        }
+    }
+}
