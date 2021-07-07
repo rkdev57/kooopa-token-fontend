@@ -3,7 +3,37 @@
 //     src: url(assets/fonts/) format("truetype");
 //   }
 $btn-font-color:#1145d7;
-
+.mobile-header {
+    background-color: black;
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+.unsupported-popup {
+    width: 80%;
+    height: 300px;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    .popup-text{
+        margin-left: 15%;
+    }
+    .sale-open{
+        text-align: center;
+        margin-top: 40%;
+        width: 200px;
+    }
+    .use-desktop{
+        margin-top: 30%;
+        font-size: 12px;
+        width: 100%;
+    }
+}
 .font-exo {
     font-family: 'Exo', sans-serif;
     color: white;
@@ -25,6 +55,9 @@ $btn-font-color:#1145d7;
     font-family: 'Orbitron', sans-serif;
     color: $btn-font-color;
     user-select: none;
+    box-shadow: -1px 1px 30px -4px rgba(255,255,255,0.78);
+    -webkit-box-shadow: -1px 1px 30px -4px rgba(255,255,255,0.78);
+    -moz-box-shadow: -1px 1px 30px -4px rgba(255,255,255,0.78);
 }
 
 .header{
@@ -57,6 +90,9 @@ $btn-font-color:#1145d7;
         font-weight: bold;
         letter-spacing: 1px;
         font-size: 22px;
+        box-shadow: -1px 1px 30px -4px rgba(255,255,255,0.78);
+        -webkit-box-shadow: -1px 1px 30px -4px rgba(255,255,255,0.78);
+        -moz-box-shadow: -1px 1px 30px -4px rgba(255,255,255,0.78);
     }
 }
 .token-info-container{
@@ -74,12 +110,11 @@ $btn-font-color:#1145d7;
             margin-left: 12%;
             margin-top: 5%;
             .info-title {
-                font-size: 48px;
+                font-size: 40px;
                 font-weight: 500;
             }
             .info{
-                letter-spacing: 4px;
-                margin-top: 25px;
+                letter-spacing: 3px;
                 font-size: 22px;
                 font-weight: lighter;
                 opacity: .7;
@@ -88,11 +123,11 @@ $btn-font-color:#1145d7;
 
                 font-weight: 600;
                 letter-spacing: 1px;
-                font-size: 22px;
-                margin-top: 70px;
-                height: 70px;
-                width: 225px;
-                line-height: 70px;
+                font-size: 24px;
+                margin-top: 20px;
+                height: 60px;
+                width: 200px;
+                line-height: 64px;
             
             }
         }
@@ -102,7 +137,9 @@ $btn-font-color:#1145d7;
         height: 100%;
         width: 35%;
         margin-left: -8%;
-        // margin-right: 200px;
+        box-shadow: 10px 13px 16px -1px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 13px 16px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 13px 16px -1px rgba(0,0,0,0.75);
         transform: skewX(-23deg);
         border-radius: 27px 20px;
         .info{
@@ -127,7 +164,7 @@ $btn-font-color:#1145d7;
             }
             .sold-out{
                 margin-top: 100px;
-                font-size: 20px;
+                font-size: 22px;
                 font-weight: bold;
                 letter-spacing: 3px;
                 /* margin-left: 50%; */
@@ -153,16 +190,23 @@ $btn-font-color:#1145d7;
     margin-top: -35px;
     letter-spacing: 1px;
 }
+.steps{
+    font-weight: bold;
+    margin-left: 7%;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
 
 .tiers-header{
-    margin-top: 200px;
+    margin-top: 50px;
     height: 350px;
     display: flex;
     flex-direction: row;
     margin-left: 1%;
     .tiers-desc{
-        font-size: 26px;
+        font-size: 24px;
         margin-top: 2%;
+        margin-right: 1%;
         font-weight: 700;
         width: 800px;
         letter-spacing: 1.5px;
@@ -174,16 +218,16 @@ $btn-font-color:#1145d7;
         margin-left: 50%;
         margin-top: 50px;
         line-height: 70px;
-        transform: translate(-50%,15px);
+        transform: translate(-50%,10px);
     }
 }
 
 .phase-container {
-    width: 90%;
-    height: 65%;
+    width: 95%;
+    height: 650px;
     margin-top: 150px;
     // border: 1px solid gold;
-    transform: translate(-50%);
+    transform: translate(-50%,0);
     margin-left: 50%;
     display: flex;
     flex-direction: row;
@@ -192,13 +236,23 @@ $btn-font-color:#1145d7;
         color: white;
         font-size: 20px;
         width: 45%;
-        margin-top: 3%;
+        margin-top: 2%;
         line-height: 30px;
         font-weight: 700;
         opacity: 0.85;
+        strong{
+            font-weight: bolder;
+        }
+        .desc-detail{
+            margin-top: 20px;
+            p {
+                font-size: 18px;
+                margin-bottom: 0;
+            }
+        }
     }
     .phase-video{
-        height: 100%px;
+        height: 100%;
         width: 70%;
         video {
             height: 100%;

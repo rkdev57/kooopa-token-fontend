@@ -1,5 +1,9 @@
 $button-font-color: #1145d7;
 
+.adjust-to-center{
+    margin-left: 50%;
+    transform: translate(-50%);
+}
 .koop-btn{
     color: blue;
     background-color: white;
@@ -24,5 +28,40 @@ $button-font-color: #1145d7;
         user-select: none;
         cursor: pointer;
         // margin-left: 4vw;
+    }
+}
+
+.info{
+    font-family: "Orbitron", sans-serif;
+    color: white;
+    margin-top: 100px;
+    .info-back{
+        padding: 15px;
+        background-color: #173148;
+        .info-text{
+            margin-left: 50px;
+            .info-title {
+                font-size: 48px;
+                font-weight: 500;
+            }
+            .info-detail{
+                letter-spacing: 4px;
+                margin-top: 25px;
+                font-size: 22px;
+                font-weight: lighter;
+                opacity: .7;
+            }
+            .start-now{
+
+                font-weight: 600;
+                letter-spacing: 1px;
+                font-size: 24px;
+                height: 60px;
+                width: 210px;
+                margin-top: 30px;
+                // line-height: 70px;
+            
+            }
+        }
     }
 }

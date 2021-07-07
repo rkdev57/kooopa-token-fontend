@@ -1,108 +1,194 @@
-<div class="header">
+<div class="header" *ngIf="!isMobileDevice">
     <img src="assets/logo.png" alt="Logo" class="logo">
     <div class="btn-connect-wallet">Connect Wallet</div>
-  </div>
-  
-  
-  <div class="token-info-container">
-    <div class="token-info-back">
-      <div class="token-info-body font-orb">
-        <p class="info-title">Koopa Token [ KOO ]</p>
-        <p class="info">Indivisual cap 10 ETH = 25000 KOO</p>
-        <div class="koop-btn deposit-btn">Deposit now</div>
-        <p class="info">1 KOO = 0,0004 ETH</p>
-        <p class="info">1 ETH = 2500 KOO</p>
-      </div>
-    </div>
-    <div class="loader font-orb">
-      <div class="info">
-  
-        <div class="amount-info">
-          <div>TOTAL AMOUNT</div>
-          <div class="amount-figure">2500 KOO = 1 ETH</div>
+</div>
+
+<div class="mobile-header" *ngIf="isMobileDevice">
+    <img src="assets/logo.png" alt="Logo">
+    <div class="unsupported-popup">
+        <div class="popup-text font-exo">
+            <div class="sale-open">
+                Kooopa Toke ( KOO ) is now open
+            </div>
+            <div class="use-desktop">
+                Please use your <strong>Desktop</strong> to join sale.
+                <div>
+                    Mobile / Tablet device don't support Metamask.
+                </div>
+            </div>
         </div>
-        <div class="amount-info">
-          <div>CLOSES IN</div>
-          <div class="days-left">0d 3h 58m 1s</div>
+    </div>
+
+</div>
+<div *ngIf="!isMobileDevice">
+    <div class="token-info-container">
+        <div class="token-info-back">
+            <div class="token-info-body font-orb">
+                <p class="info-title">Kooopa Token ( KOO ) Public Sale Phase 1</p>
+                <p class="info">Indivisual cap 0.5 ETH = 5,000,000 KOO</p>
+                <div class="koop-btn deposit-btn mb-2">Start now</div>
+                <p class="info">1 KOO = 0,0004 ETH</p>
+                <p class="info">1 ETH = 2500 KOO</p>
+            </div>
         </div>
-        <div class="sold-out">20659349/25000000</div>
-        <div class="progress-bar-container">
-          <mat-progress-bar mode="determinate" value="70"
-          class="amount-progress-bar"></mat-progress-bar>
-          <div class="marker"></div>
+        <div class="loader font-orb">
+            <div class="info">
+
+                <div class="amount-info">
+                    <div>TOTAL AMOUNT</div>
+                    <div class="amount-figure">2500 KOO = 1 ETH</div>
+                </div>
+                <div class="amount-info">
+                    <div>CLOSES IN</div>
+                    <div class="days-left">Starting soon</div>
+                </div>
+                <div class="sold-out">20659349/25000000</div>
+                <div class="progress-bar-container">
+                    <mat-progress-bar mode="determinate" value="70" class="amount-progress-bar"></mat-progress-bar>
+                    <div class="marker"></div>
+                </div>
+            </div>
         </div>
-      </div>
-      </div>
-  </div>
-  <div class="font-exo please">Please connect wallet first to join token sale</div>
-  
-  <div class="tiers-header">
-    <img src="assets/tiers.png" alt="Koopa Tiers" class="tiers-img">
-    <div class="tiers-desc font-exo">
-      Koopa uses a tier based system to determine the gauranteed allocation for each participant in a pool.
-      It's a fair and simple process: the amount of KOO tokens a holder has staked determines the pool weight of 
-      allocation for a given participant.
-      <div class="koop-btn btn-connect">BECOME A TROOPA</div>
     </div>
-  </div>
-  
-  <div class="phase-container phase-1">
-    <div class="phase-video">
-      <video autoplay loop src="assets/phase1-vid.mp4"></video>
+    <div class="font-exo please">Steps to participate in token sale:</div>
+    <div class="font-exo steps">1. Connect wallet</div>
+    <div class="font-exo steps">2. Click Start now</div>
+    <div class="font-exo steps">3. Complete the form</div>
+    <div class="font-exo steps">4. Follow steps to process deposit</div>
+    <div class="tiers-header">
+        <img src="assets/tiers.png" alt="Koopa Tiers" class="tiers-img">
+        <div class="tiers-desc font-exo">
+            From the beginning we set out to make the Kooopa public sale as fair as possible,
+            giving participants at each phase an equal shot at a discounted fair price.
+            Depending on when the FOMO kicks in for you, we’ve created four sale phases,
+            each with a different offering to suit you. As the phases go on the
+            discounted price will increase, all before settling at our DEX listing price.
+            <div class="koop-btn btn-connect">BECOME A TROOPA</div>
+        </div>
     </div>
-    <div class="phase-desc mr">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-      nisi ut aliquip ex ea commodo consequa.
+
+    <div class="phase-container phase-1">
+        <div class="phase-video">
+            <video autoplay loop src="assets/phase1-vid.mp4"></video>
+        </div>
+        <div class="phase-desc mr">
+            <strong>
+                OK boomer — you’ve had a head start this far,
+                why stop now? Phase 1 is for those looking for a once
+                in a generation-type token sale price.</strong> Sale starts on Monday,
+            July 19 and will sell 250 million (2.5%) KOO at a price of 0.0002 USD per token.
+            The only accepted currency to purchase tokens in this phase is the ETH.
+            This phase lasts for 7 days or until all tokens have been sold,
+            whichever comes first. Any unsold tokens will be added to the next phase.
+            <div class="desc-detail">
+                <p>Phase 1 Token Sale Allocation - 250,000,000 KOO</p>
+                <p>Phase 1 Start Date - July 19 2021 12pm UTC.</p>
+                <p>KOO Sale Price - 0.0002 USD</p>
+                <p>Maximum Purchase per User - 5,000,000 KOO </p>
+                <p>Sale Duration - 7 days or until all tokens have been sold </p>
+                <p>Purchase Currency - ETH </p>
+                <p>Vesting Period - None </p>
+                <p>Token Type - ERC20 </p>
+                <p>Token Distribution - After the end of Phase 3 token sale </p>
+            </div>
+        </div>
     </div>
-  </div>
-  
-  <div class="phase-container phase-2">
-  
-    <div class="phase-desc ml">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-      nisi ut aliquip ex ea commodo consequa.
+
+    <div class="phase-container phase-2">
+
+        <div class="phase-desc ml">
+            Here’s to the MTV Generation, never last to a party but usually
+            ‘fashionably’ late. Don’t let the Boomers get one over on you again,
+            this is your chance. Sale starts on Monday, July 26 and will sell
+            750 million (7.5%) KOO at a price of 0.00025 USD per token.
+            In this phase we will accept any ERC-20 token and Fiat payments
+            supported by our onramp provider. This phase lasts for 7 days or
+            until all tokens have been sold, whichever comes first.
+            Any unsold tokens will be added to the next phase.
+
+            <div class="desc-detail">
+                <p> Phase 2 Token Sale Allocation - 750,000,000 KOO </p>
+                <p> Phase 2 Start Date - July 26 2021 12pm UTC </p>
+                <p> KOO Sale Price - 0.00025 USD </p>
+                <p> Maximum Purchase per User - 5,000,000 KOO </p>
+                <p> Sale Duration - 7 days or until all tokens have been sold </p>
+                <p> Purchase Currency - Any ERC-20 token + Fiat </p>
+                <p> Vesting Period - None </p>
+                <p> Token Type - ERC20 </p>
+                <p> Token Distribution - After the end of Phase 3 token sale </p>
+
+            </div>
+        </div>
+        <div class="phase-video">
+            <video autoplay loop src="assets/phase2-vid.mp4"></video>
+        </div>
     </div>
-    <div class="phase-video">
-      <video autoplay loop src="assets/phase2-vid.mp4"></video>
+
+    <div class="phase-container phase-3">
+
+        <div class="phase-video">
+            <video autoplay loop src="assets/phase3-vid.mp4"></video>
+        </div>
+        <div class="phase-desc mr">
+            Housing crisis, crippling student debt,
+            Uber and Netflix taking all your money —
+            It's a sick joke, I know right? But forget
+            all that, Millennials. This is what you’ve
+            been waiting for, think AMC and Doge had a baby,
+            and that baby is on steroids: That’s Kooopa.
+            Don’t miss out, you know you will FOMO hard otherwise.
+            Sale starts on Monday, Aug 2 and will sell 750 million (7.5%)
+            KOO at a price of 0.0003 USD per token. In this phase we will
+            accept any ERC-20 token and Fiat payments supported by our onramp provider.
+            This phase lasts for 7 days or until all tokens have been sold,
+            whichever comes first.
+            Any unsold tokens will be added to the next phase.
+
+            <div class="desc-detail">
+                <p> Phase 3 Token Sale Allocation - 750,000,000 KOO </p>
+                <p> Phase 3 Start Date - Aug 2 2021 12pm UTC </p>
+                <p> KOO Sale Price - 0.0003 USD </p>
+                <p> Maximum Purchase per User - 5,000,000 KOO </p>
+                <p> Sale Duration - 7 days or until all tokens have been sold </p>
+                <p> Purchase Currency - Any ERC-20 token + Fiat </p>
+                <p> Vesting Period - None </p>
+                <p> Token Type - ERC20 </p>
+                <p> Token Distribution - After the end of this phase </p>
+            </div>
+        </div>
     </div>
-  </div>
-  
-  <div class="phase-container phase-3">
-  
-    <div class="phase-video">
-      <video autoplay loop src="assets/phase3-vid.mp4"></video>
+
+    <div class="phase-container phase-4">
+
+        <div class="phase-desc ml">
+            You don’t need money, we know. You made your first billion at age 21
+            providing liquidity to a Shibu-BabyDoge pool returning 9887% APR on
+            some underground-secret 4chan DEX nobody has even heard of.
+            You are the DeFi generation. Gen-Z, you know what to do.
+            Sale starts on Monday, Aug 9 and will allocate 250 million
+            (2.5%) KOO to SushiSwap. This will create an ETH/KOO Liquidity Pool,
+            at a price of 0.0005USD. Holders of KOO will be able to pool their KOO and earn 0.25%
+            fee on all trades proportional to their share of the pool.
+            <div class="desc-detail">
+                <p> Phase 4 Token Allocation for LP - 250,000,000 KOO </p>
+                <p> Phase 4 Date - Aug 9 2021 12pm UTC </p>
+                <p> DEX - SushiSwap </p>
+                <p> KOO LP Price - 0.0005USD </p>
+                <p> Fees Earned - 0.25% </p>
+            </div>
+        </div>
+        <div class="phase-video">
+            <video autoplay loop src="assets/phase4-vid.mp4"></video>
+        </div>
     </div>
-    <div class="phase-desc mr">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-      nisi ut aliquip ex ea commodo consequa.
+
+    <div class="footer">
+        <img src="assets/footer-logo.png" alt="footer-logo" class="footer-logo">
+        <div class="footer-links font-orb">
+            <div class="footer-link">twitter</div>
+            <div class="footer-link">Docs</div>
+            <div class="footer-link">Team</div>
+            <div class="footer-link">Apply</div>
+        </div>
     </div>
-  </div>
-  
-  <div class="phase-container phase-4">
-  
-    <div class="phase-desc ml">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-      nisi ut aliquip ex ea commodo consequa.
-    </div>
-    <div class="phase-video">
-      <video autoplay loop src="assets/phase4-vid.mp4"></video>
-    </div>
-  </div>
-  
-  <div class="footer">
-    <img src="assets/footer-logo.png" alt="footer-logo" class="footer-logo">
-    <div class="footer-links font-orb">
-      <div class="footer-link">twitter</div>
-      <div class="footer-link">Docs</div>
-      <div class="footer-link">Team</div>
-      <div class="footer-link">Apply</div>
-    </div>
-  </div>
+</div>
