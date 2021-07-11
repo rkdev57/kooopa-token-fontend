@@ -17,7 +17,8 @@ const TokenProgress: FC = () => {
                 Start now
               </button>
 
-              <p>1 KOO = 0,0004 ETH 1 ETH = 2500 KOO</p>
+              <p>1 KOO = 0.0000001 ETH</p>
+              <p>1 ETH = 10,000,000 KOO</p>
             </div>
           </div>
           <div className="col-md-5">

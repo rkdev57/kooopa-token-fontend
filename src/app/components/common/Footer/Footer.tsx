@@ -22,7 +22,7 @@ const Footer: FC = () => {
           <img className={s.sectionImage} src="/images/footer-bg.png" alt="" />
         </div>
         <div className={s.listItem}>
-          <a href="/">Website</a>
+          <a href="https://kooopa.io">Website</a>
           <a href="https://twitter.com/kooopatoken" target="_blank">
             Twitter
           </a>
