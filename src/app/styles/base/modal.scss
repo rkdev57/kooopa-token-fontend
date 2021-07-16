@@ -1,0 +1,25 @@
+.wallet-modal {
+  .wallet-list {
+    display: flex;
+    flex-wrap: wrap;
+    .wallet-item {
+      flex: 0 0 100%;
+      max-width: 100%;
+      background: transparent;
+      border: 0;
+      background: #f1f1f1;
+      padding: 1rem;
+      cursor: pointer;
+      &:hover {
+        background: #e8e8e8;
+      }
+      .wallet-icon {
+        height: 3rem;
+      }
+    }
+  }
+  .wallet-loading {
+    display: flex;
+    justify-content: center;
+  }
+}

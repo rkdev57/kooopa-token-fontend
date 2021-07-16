@@ -1,0 +1,20 @@
+.walletContainer {
+  .walletWrapper {
+    .wallet-list {
+      display: flex;
+      flex-wrap: wrap;
+      button {
+        flex: 0 0 100%;
+        max-width: 100%;
+        background: transparent;
+        border: 0;
+        background: #f1f1f1;
+        padding: 1rem;
+        cursor: pointer;
+        .icon {
+          height: 3rem;
+        }
+      }
+    }
+  }
+}
