@@ -53,7 +53,7 @@ const CoopaPhases: FC = () => {
             muted
             autoPlay={true}
             loop={true}
-            src={`${cloudinaryBasePath}retro-game-console-hd-XTN8EUZ-800.mp4`}"
+            src={`${cloudinaryBasePath}retro-game-console-hd-XTN8EUZ-800.mp4`}
           />
         </div>
       </div>
