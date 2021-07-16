@@ -3,44 +3,9 @@ import { SectionData } from "./SectionData";
 import s from "./CoopaPhases.module.scss";
 
 const CoopaPhases: FC = () => {
-  /* const Phase1Old: FC = () => (
-    <div className={`row ${s.singlePhase}`}>
-      <div className={`col-md-6 ${s.alignVideoCenter}`}>
-        <div className={`${s.videoWrapper}`}>
-          <video
-            autoPlay={true}
-            loop={true}
-            src="https://res.cloudinary.com/cerebza/video/upload/v1625948604/temp/retro-game-console-hd-MVCNQTF-800.mp4"
-          />
-        </div>
-      </div>
-      <div className="col-md-4">
-        <div className={s.content}>
-          <p>
-            <b>
-              OK boomer — you’ve had a head start this far, why stop now? Phase
-              1 is for those looking for a once in a generation-type token sale
-              price.
-            </b>{" "}
-            Sale starts on Monday, July 19 and will sell 250 million (2.5%) KOO
-            at a price of 0.0002 USD per token. The only accepted currency to
-            purchase tokens in this phase is the ETH. This phase lasts for 7
-            days or until all tokens have been sold, whichever comes first. Any
-            unsold tokens will be added to the next phase.
-          </p>
-          <ShowListItems items={SectionData.phase1} />
-          <div className={s.header}>
-            <span className={s.heading}>Phase 1</span>
-            <img
-              className={s.phaseIcon}
-              src="/images/phases/phase-1.png"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  ); */
+  const cloudinaryBasePath =
+    "https://res.cloudinary.com/cerebza/video/upload/v1625948604/temp/";
+
   const Phase1: FC = () => (
     <div className={`row ${s.singlePhase} ${s.phase1}`}>
       <div className={`col-md-7 ${s.alignVideoCenter}`}>
@@ -49,7 +14,7 @@ const CoopaPhases: FC = () => {
             muted
             autoPlay={true}
             loop={true}
-            src="https://res.cloudinary.com/cerebza/video/upload/v1625948604/temp/retro-game-console-hd-MVCNQTF-800.mp4"
+            src={`${cloudinaryBasePath}retro-game-console-hd-MVCNQTF-800.mp4`}
           />
         </div>
       </div>
@@ -88,7 +53,7 @@ const CoopaPhases: FC = () => {
             muted
             autoPlay={true}
             loop={true}
-            src="https://res.cloudinary.com/cerebza/video/upload/v1625948588/temp/retro-game-console-hd-XTN8EUZ-800.mp4"
+            src={`${cloudinaryBasePath}retro-game-console-hd-XTN8EUZ-800.mp4`}"
           />
         </div>
       </div>
@@ -129,7 +94,7 @@ const CoopaPhases: FC = () => {
             muted
             autoPlay={true}
             loop={true}
-            src="https://res.cloudinary.com/cerebza/video/upload/v1625948609/temp/high-technology-ray-tracing-graphics-card-hd-9EPFW9J-800.mp4"
+            src={`${cloudinaryBasePath}high-technology-ray-tracing-graphics-card-hd-9EPFW9J-800.mp4`}
           />
         </div>
       </div>
@@ -172,7 +137,7 @@ const CoopaPhases: FC = () => {
             muted
             autoPlay={true}
             loop={true}
-            src="https://res.cloudinary.com/cerebza/video/upload/v1625942522/temp/abstract-virtual-reality-headset-hd-ZG49HGG-800.mp4"
+            src={`${cloudinaryBasePath}abstract-virtual-reality-headset-hd-ZG49HGG-800.mp4`}
           />
         </div>
       </div>
@@ -211,16 +176,18 @@ const CoopaPhases: FC = () => {
   const ShowListItems: FC<ListItemInterface> = ({ items }) => (
     <div className={s.listItem}>
       <table>
-        {items.map((item: any, index: number) => (
-          <tr key={index} className={s.label}>
-            <td>
-              <span>{item.label}</span>
-            </td>
-            <td>
-              <span className={s.value}>{item.value}</span>
-            </td>
-          </tr>
-        ))}
+        <tbody>
+          {items.map((item: any, index: number) => (
+            <tr key={index} className={s.label}>
+              <td>
+                <span>{item.label}</span>
+              </td>
+              <td>
+                <span className={s.value}>{item.value}</span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );
@@ -232,18 +199,12 @@ const CoopaPhases: FC = () => {
       preserveAspectRatio="none"
       className={s.videoClip}
     >
-      {/* <path
-        d="M.134.132H115.04L88.959 54.94H.89z"
-        fill="#000"
-        stroke="#000"
-        stroke-width=".265"
-      /> */}
       <defs>
         <clipPath id="mask">
           <path
             d="M1 1.84h739.884c43.22 0 68.875-8.534 53.75 29.834C778.576 64.185 709.03 213.215 600.436 449H1z"
             stroke="#fff"
-            stroke-width="2.002"
+            strokeWidth="2.002"
           />
         </clipPath>
       </defs>
