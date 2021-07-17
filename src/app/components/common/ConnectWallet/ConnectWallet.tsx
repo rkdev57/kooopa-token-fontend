@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import { Modal, notification, Spin } from "antd";
 
 import s from "./ConnectWallet.module.scss";
+import { useUI } from "../../../contexts/AppContext";
 
 interface Props {
   open: boolean;
@@ -13,8 +14,7 @@ export const ConnectWallet: FC<Props> = ({
   onClose,
   onAccountConnected,
 }) => {
-  const [wallets, setWallets] = useState(null);
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const { updateWallet } = useUI();
   const [isLoading, setIsLoading] = useState(false);
 
   const connectWallet = async () => {
@@ -26,6 +26,7 @@ export const ConnectWallet: FC<Props> = ({
       });
       onAccountConnected(accounts);
       setIsLoading(false);
+      updateWallet(accounts);
       onClose();
       notification.success({ message: "Wallet connected" });
       return;

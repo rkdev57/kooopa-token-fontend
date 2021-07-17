@@ -1,7 +1,35 @@
-import { FC } from "react";
+import { notification } from "antd";
+import { FC, useState } from "react";
+import { Widget, PopupButton } from "@typeform/embed-react/build/index";
+import { useUI } from "../../../contexts/AppContext";
 import s from "./TokenProgress.module.scss";
+import Modal from "antd/lib/modal/Modal";
 
 const TokenProgress: FC = () => {
+  const { wallet } = useUI();
+  const [popupActive, setPopupActive] = useState(false);
+
+  const startProcess = () => {
+    if (!wallet || wallet.length === 0) {
+      notification.error({ message: "Please connect your wallet!" });
+      return;
+    }
+    setPopupActive(true);
+  };
+
+  const TypeFormComponent = () => {
+    return (
+      <Modal
+        visible={true}
+        onCancel={() => setPopupActive(false)}
+        footer={null}
+        wrapClassName="typeform-popup"
+      >
+        <Widget id="C9AgcxOG" className="typeform" />
+      </Modal>
+    );
+  };
+
   return (
     <div className={s.sectionWrapper}>
       <div className="container">
@@ -13,9 +41,13 @@ const TokenProgress: FC = () => {
               </span>
               <p>Individual Cap 0.5 ETH = 5,000,000 KOO</p>
 
-              <button className={`btn-app-default ${s.buyNow}`}>
+              <button
+                className={`btn-app-default ${s.buyNow}`}
+                onClick={() => startProcess()}
+              >
                 Start now
               </button>
+              {popupActive && TypeFormComponent()}
 
               <p>1 KOO = 0.0000001 ETH</p>
               <p>1 ETH = 10,000,000 KOO</p>
