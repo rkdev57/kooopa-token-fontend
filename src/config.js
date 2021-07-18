@@ -1,16 +1,8 @@
 const defaultConfig = {
+  typeForm: {
+    formId: 'C9AgcxOG',
+  },
   contractABI: [
-    {
-      inputs: [
-        {
-          internalType: 'address',
-          name: 'owner',
-          type: 'address',
-        },
-      ],
-      stateMutability: 'nonpayable',
-      type: 'constructor',
-    },
     {
       anonymous: false,
       inputs: [
@@ -65,7 +57,51 @@ const defaultConfig = {
     },
     {
       inputs: [],
-      name: 'FundsAccured',
+      name: 'Invest',
+      outputs: [],
+      stateMutability: 'payable',
+      type: 'function',
+    },
+    {
+      inputs: [],
+      name: 'renounceOwnership',
+      outputs: [],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [
+        {
+          internalType: 'address',
+          name: 'newOwner',
+          type: 'address',
+        },
+      ],
+      name: 'transferOwnership',
+      outputs: [],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [
+        {
+          internalType: 'address',
+          name: 'owner',
+          type: 'address',
+        },
+      ],
+      stateMutability: 'nonpayable',
+      type: 'constructor',
+    },
+    {
+      inputs: [
+        {
+          internalType: 'address',
+          name: '',
+          type: 'address',
+        },
+      ],
+      name: 'balances',
       outputs: [
         {
           internalType: 'uint256',
@@ -78,33 +114,7 @@ const defaultConfig = {
     },
     {
       inputs: [],
-      name: 'Invest',
-      outputs: [],
-      stateMutability: 'payable',
-      type: 'function',
-    },
-    {
-      inputs: [],
-      name: 'TGEwallet',
-      outputs: [
-        {
-          internalType: 'address payable',
-          name: '',
-          type: 'address',
-        },
-      ],
-      stateMutability: 'view',
-      type: 'function',
-    },
-    {
-      inputs: [
-        {
-          internalType: 'address',
-          name: '',
-          type: 'address',
-        },
-      ],
-      name: 'balances',
+      name: 'FundsAccured',
       outputs: [
         {
           internalType: 'uint256',
@@ -149,26 +159,19 @@ const defaultConfig = {
     },
     {
       inputs: [],
-      name: 'renounceOwnership',
-      outputs: [],
-      stateMutability: 'nonpayable',
-      type: 'function',
-    },
-    {
-      inputs: [
+      name: 'TGEwallet',
+      outputs: [
         {
-          internalType: 'address',
-          name: 'newOwner',
+          internalType: 'address payable',
+          name: '',
           type: 'address',
         },
       ],
-      name: 'transferOwnership',
-      outputs: [],
-      stateMutability: 'nonpayable',
+      stateMutability: 'view',
       type: 'function',
     },
   ],
-  contractAddress: '0x5f6b21A47C0e150e11ce90f9D7cD91a127A21628',
+  contractAddress: '0xf6CF0973E406C1b06B7793968D2e7785918CeC2c',
 };
 
 const dev = {};

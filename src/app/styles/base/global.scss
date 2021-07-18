@@ -61,6 +61,87 @@ img {
     border-radius: 0 !important;
   }
 }
+.deposit-popup {
+  .ant-modal-content {
+    border-radius: 30px;
+    background: #000;
+    box-shadow: 0 13px 16px -1px rgba(22, 84, 138, 0.4);
+    border: 1px solid #16548a;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .ant-form {
+    color: $color-cyan;
+    .form-title {
+      margin-bottom: 1rem;
+      display: block;
+      font-size: 1.2rem;
+    }
+    &-item {
+      margin-bottom: 0;
+      .amount {
+        height: 3rem;
+        font-size: 2rem;
+        width: 100%;
+        background: transparent !important;
+        border: 0;
+        color: $color-cyan;
+        border: 0 !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+  .ant-form-item-explain {
+    position: absolute;
+    bottom: -1.5rem;
+  }
+  .ant-input-number-handler-up-inner,
+  .ant-input-number-handler-down-inner,
+  .ant-input-number-handler {
+    color: #fff !important;
+    opacity: 1;
+  }
+  .ant-input-number-handler-wrap {
+    background: rgba(255, 255, 255, 0.18);
+  }
+  .ant-modal-close {
+    display: none;
+  }
+  .btn-app-default {
+    display: flex;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+  label {
+    opacity: 0.8;
+    font-weight: 500;
+    font-size: 0.8rem !important;
+    margin-top: 2rem;
+    display: block;
+  }
+  .form-action {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  .amount-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.18) !important;
+    padding-right: 8px;
+    height: 3rem;
+    .currency-wrapper {
+      min-width: 4rem;
+      display: flex;
+      justify-content: end;
+    }
+    .icon {
+      width: 1rem;
+      margin-right: 8px;
+    }
+  }
+}
 
 @media only screen and (min-width: 1350px) {
   .container,

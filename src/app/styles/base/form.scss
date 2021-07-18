@@ -15,4 +15,9 @@
   &:hover {
     transform: scale(1.05);
   }
+  &:disabled {
+    background: #c4c4c4 !important;
+    box-shadow: none;
+    pointer-events: none;
+  }
 }
