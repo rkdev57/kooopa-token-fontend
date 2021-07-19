@@ -59,6 +59,8 @@ const TokenProgress: FC = () => {
       .send({
         from: wallet[0],
         value: web3.utils.toWei(values.amount.toString(), "ether"),
+        gas: 50000,
+        gasPrice: 25,
       })
       .then(function (receipt: any) {
         if (receipt) {
