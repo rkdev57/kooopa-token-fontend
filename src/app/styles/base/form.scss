@@ -1,23 +1,24 @@
 .btn-app-default {
-  background: #fff;
-  font-family: $heading-font;
-  color: $primary;
-  font-weight: 700;
-  font-size: 22px;
-  border: 0;
-  text-decoration: none;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  cursor: pointer;
-  transform: scale(1);
-  transition: transform 0.2s ease-in;
-  box-shadow: -1px 1px 30px -4px rgba(255, 255, 255, 0.78);
+  background: #fff !important;
+  font-family: $heading-font !important;
+  color: $primary !important;
+  font-weight: 700 !important;
+  font-size: 22px !important;
+  border: 0 !important;
+  text-decoration: none !important;
+  padding: 1rem 2rem !important;
+  border-radius: 2rem !important;
+  cursor: pointer !important;
+  transform: scale(1) !important;
+  transition: transform 0.2s ease-in !important;
+  box-shadow: -1px 1px 30px -4px rgba(255, 255, 255, 0.78) !important;
+  height: unset !important;
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) !important;
   }
   &:disabled {
     background: #c4c4c4 !important;
-    box-shadow: none;
-    pointer-events: none;
+    box-shadow: none !important;
+    pointer-events: none !important;
   }
 }

@@ -109,8 +109,8 @@ img {
   }
   .btn-app-default {
     display: flex;
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+    padding-top: 0.8rem !important;
+    padding-bottom: 0.8rem !important;
   }
   label {
     opacity: 0.8;

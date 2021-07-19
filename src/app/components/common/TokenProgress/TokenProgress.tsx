@@ -1,28 +1,37 @@
-import { InputNumber, notification, Form, Button } from "antd";
-import { FC, useState } from "react";
 import { Widget } from "@typeform/embed-react/build/index";
-import { useUI } from "../../../contexts/AppContext";
-import s from "./TokenProgress.module.scss";
+import { Form, InputNumber, notification, Button, Statistic } from "antd";
 import Modal from "antd/lib/modal/Modal";
-import config from "../../../../config";
-import { FormRule } from "./FormRule";
+import moment from "moment";
+import { FC, useEffect, useState } from "react";
 import Web3 from "web3";
+import config from "../../../../config";
+import { useUI } from "../../../contexts/AppContext";
+import { FormRule } from "./FormRule";
+import s from "./TokenProgress.module.scss";
 
 const TokenProgress: FC = () => {
   const { wallet } = useUI();
+  const { Countdown } = Statistic;
+  const [form] = Form.useForm();
+
   const [popupActive, setPopupActive] = useState(false);
   const [isDepositActive, setIsDepositActive] = useState(false);
+  const [curentEthValue, setCurrentEthValue] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const ethToKoop = 10000000;
+  const phaseDeadline = moment
+    .utc(moment.utc("2021-07-26 11:59").toDate())
+    .local()
+    .format();
+  // const phaseDeadline = moment("2021-07-26 11:59").format();
 
   const web3 = new Web3(Web3.givenProvider);
-
   const contractABI: any = config.contractABI;
-
   const TGEContract = new web3.eth.Contract(
     contractABI,
     config.contractAddress
   );
-
-  const [form] = Form.useForm();
 
   const startProcess = () => {
     if (!isWalletConnected()) {
@@ -43,6 +52,8 @@ const TokenProgress: FC = () => {
     if (!isWalletConnected()) {
       return false;
     }
+    setIsLoading(true);
+
     TGEContract.methods
       .Invest()
       .send({
@@ -50,9 +61,25 @@ const TokenProgress: FC = () => {
         value: web3.utils.toWei(values.amount.toString(), "ether"),
       })
       .then(function (receipt: any) {
-        console.log(receipt);
+        if (receipt) {
+          notification.success({ message: "Amount deposited" });
+        }
+        setIsDepositActive(false);
+        setIsLoading(false);
       });
   };
+
+  const showBalance = async () => {
+    if (Web3.givenProvider) {
+      const balance = await web3.eth.getBalance(config.contractAddress);
+      const entherValue = +web3.utils.fromWei(balance);
+      setCurrentEthValue(entherValue);
+    }
+  };
+
+  useEffect(() => {
+    showBalance();
+  }, []);
 
   const TypeFormComponent = () => {
     return (
@@ -110,19 +137,24 @@ const TokenProgress: FC = () => {
             <div className="form-action">
               <Form.Item shouldUpdate>
                 {() => (
-                  <button
-                    className={`btn-app-default`}
-                    type="submit"
+                  <Button
+                    type="primary"
+                    htmlType="submit"
+                    loading={isLoading}
                     disabled={isDepostValid()}
+                    className={`btn-app-default`}
                   >
                     Submit
-                  </button>
+                  </Button>
                 )}
               </Form.Item>
               <button
                 className={`btn-app-default`}
                 type="button"
-                onClick={() => setIsDepositActive(false)}
+                onClick={() => {
+                  setIsDepositActive(false);
+                  setIsLoading(false);
+                }}
               >
                 Cancel
               </button>
@@ -166,13 +198,17 @@ const TokenProgress: FC = () => {
                 </div>
                 <div className={s.data}>
                   <span className={s.label}>CLOSES IN</span>
-                  <span className={s.value}>Starting soon</span>
+                  <span className={s.value}>
+                    <Countdown value={phaseDeadline} format="Dd Hh m[m] s[s]" />
+                  </span>
                 </div>
 
                 <div className={s.progressBarContainer}>
-                  <span className={s.label}>0/250,000,000</span>
                   <span className={s.progressBar}>
-                    <span className={s.bar} style={{ width: "60%" }}></span>
+                    <span
+                      className={s.bar}
+                      style={{ width: `${curentEthValue / 0.25}%` }}
+                    ></span>
                     <div
                       className={s.caps}
                       data-label="60% Soft Cap"

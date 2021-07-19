@@ -54,19 +54,27 @@
       content: "";
       position: absolute;
       right: 0;
-      top: -15%;
-      height: 130%;
-      width: 90%;
+      top: -6%;
+      height: 114%;
+      width: 103%;
       z-index: -1;
       transform: skewX(-25deg);
       border-radius: 30px 20px;
       background: #000;
       box-shadow: 10px 13px 16px -1px rgba(0, 0, 0, 0.75);
+      @media (min-width: 1600px) {
+        width: 90%;
+      }
     }
     .dataWrapper {
-      margin-left: 25%;
-      padding-top: 3rem;
-      margin-right: -5%;
+      margin-left: 21%;
+      padding-top: 9rem;
+      margin-right: -10%;
+      @media (min-width: 1600px) {
+        margin-left: 25%;
+        padding-top: 9rem;
+        margin-right: -5%;
+      }
       .data {
         display: flex;
         justify-content: space-between;
@@ -74,18 +82,30 @@
         margin-bottom: 1rem;
         font-weight: 600;
         letter-spacing: 2px;
+        margin-left: -2rem;
+        width: 98%;
         .value {
-          font-size: 1.9rem;
-          display: inline-block;
-          margin-right: 1.3rem;
+          * {
+            font-size: 1.9rem;
+            display: inline-block;
+            margin-right: 1.3rem;
+            color: $color-cyan;
+            font-family: $heading-font;
+            margin-right: 0;
+          }
         }
       }
     }
   }
   .progressBarContainer {
-    margin-top: 2rem;
     text-align: center;
-    margin-left: -40%;
+    margin-left: -52%;
+    margin-top: 4rem;
+    @media (min-width: 1600px) {
+      margin-top: 4rem;
+      margin-left: -29%;
+    }
+
     .label {
       display: block;
       margin-top: 3rem;
@@ -95,7 +115,7 @@
     }
     .progressBar {
       display: block;
-      width: 62%;
+      width: 61%;
       margin: 0 auto;
       margin-top: 0px;
       margin-top: 0px;
@@ -107,6 +127,10 @@
       background: rgb(0, 0, 0);
       box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25),
         0 0 4px 2px rgba(57, 195, 176, 0.6);
+
+      @media (min-width: 1600px) {
+        width: 70%;
+      }
 
       .caps {
         position: relative;
