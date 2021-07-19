@@ -172,7 +172,7 @@ const TokenProgress: FC = () => {
                 <div className={s.progressBarContainer}>
                   <span className={s.label}>0/250,000,000</span>
                   <span className={s.progressBar}>
-                    <span className={s.bar} style={{ width: "60%" }}></span>
+                    <span className={s.bar} style={{ width: "1%" }}></span>
                     <div
                       className={s.caps}
                       data-label="60% Soft Cap"
