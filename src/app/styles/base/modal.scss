@@ -10,11 +10,15 @@
       background: #f1f1f1;
       padding: 1rem;
       cursor: pointer;
+      margin: 5px 0;
       &:hover {
         background: #e8e8e8;
       }
       .wallet-icon {
         height: 3rem;
+        &.small {
+          height: 2.4rem;
+        }
       }
     }
   }

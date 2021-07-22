@@ -26,13 +26,6 @@ const TokenProgress: FC = () => {
     .format();
   // const phaseDeadline = moment("2021-07-26 11:59").format();
 
-  const web3 = new Web3(Web3.givenProvider);
-  const contractABI: any = config.contractABI;
-  const TGEContract = new web3.eth.Contract(
-    contractABI,
-    config.contractAddress
-  );
-
   const startProcess = () => {
     if (!isWalletConnected()) {
       return false;
@@ -41,7 +34,7 @@ const TokenProgress: FC = () => {
   };
 
   const isWalletConnected = () => {
-    if (!wallet || wallet.length === 0) {
+    if (!wallet.accounts || wallet.accounts.length === 0) {
       notification.error({ message: "Please connect your wallet!" });
       return false;
     }
@@ -53,11 +46,19 @@ const TokenProgress: FC = () => {
       return false;
     }
     setIsLoading(true);
+    const provider = wallet.provider ? wallet.provider : Web3.givenProvider;
+
+    const web3 = new Web3(provider);
+    const contractABI: any = config.contractABI;
+    const TGEContract = new web3.eth.Contract(
+      contractABI,
+      config.contractAddress
+    );
 
     TGEContract.methods
       .Invest()
       .send({
-        from: wallet[0],
+        from: wallet.accounts[0],
         value: web3.utils.toWei(values.amount.toString(), "ether"),
         gas: 50000,
         gasPrice: 25,
@@ -73,6 +74,7 @@ const TokenProgress: FC = () => {
 
   const showBalance = async () => {
     if (Web3.givenProvider) {
+      const web3 = new Web3(Web3.givenProvider);
       const balance = await web3.eth.getBalance(config.contractAddress);
       const entherValue = +web3.utils.fromWei(balance);
       setCurrentEthValue(entherValue);

@@ -36,7 +36,7 @@ const Header: FC = () => {
                 className={`btn-app-default ${s.btnAction} ${s.walletDetails}`}
                 onClick={() => copyWalletAddress()}
               >
-                {account.slice(0, 5)}...{account.slice(-5)}
+                {account.slice(0, 6)}...{account.slice(-4)}
                 <img
                   className={s.copy}
                   src="/images/icons/copy-primary.png"

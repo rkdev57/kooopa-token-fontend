@@ -1,8 +1,11 @@
 import { FC, useState } from "react";
 import { Modal, notification, Spin } from "antd";
+import WalletConnectProvider from "@walletconnect/web3-provider";
+import Web3 from "web3";
 
 import s from "./ConnectWallet.module.scss";
 import { useUI } from "../../../contexts/AppContext";
+import config from "../../../../config";
 
 interface Props {
   open: boolean;
@@ -17,22 +20,39 @@ export const ConnectWallet: FC<Props> = ({
   const { updateWallet } = useUI();
   const [isLoading, setIsLoading] = useState(false);
 
-  const connectWallet = async () => {
+  const metaMaskConnect = async () => {
     setIsLoading(true);
     if (window && typeof window.ethereum !== "undefined") {
       const ethereum = window.ethereum;
       const accounts = await ethereum.request({
         method: "eth_requestAccounts",
       });
-      onAccountConnected(accounts);
-      setIsLoading(false);
-      updateWallet(accounts);
-      onClose();
-      notification.success({ message: "Wallet connected" });
+      afterWalletConnect(accounts);
       return;
     }
     notification.error({ message: "Please install MetaMask" });
     setIsLoading(false);
+  };
+
+  const walletConnect = async () => {
+    setIsLoading(true);
+    const provider: any = new WalletConnectProvider(config.walletConnect);
+    //  Enable session (triggers QR Code modal)
+    await provider.enable();
+    const web3 = new Web3(provider);
+    const accounts = await web3.eth.getAccounts();
+    afterWalletConnect(accounts, provider);
+  };
+
+  const afterWalletConnect = (accounts: any, provider = "") => {
+    onAccountConnected(accounts);
+    setIsLoading(false);
+    updateWallet({
+      accounts,
+      provider,
+    });
+    onClose();
+    notification.success({ message: "Wallet connected" });
   };
 
   return (
@@ -46,10 +66,17 @@ export const ConnectWallet: FC<Props> = ({
       >
         {!isLoading && (
           <div className="wallet-list">
-            <button className="wallet-item" onClick={() => connectWallet()}>
+            <button className="wallet-item" onClick={() => metaMaskConnect()}>
               <img
                 className="wallet-icon"
                 src="/images/wallets/metamask.png"
+                alt=""
+              />
+            </button>
+            <button className="wallet-item" onClick={() => walletConnect()}>
+              <img
+                className="wallet-icon small"
+                src="/images/wallets/walletconnect.png"
                 alt=""
               />
             </button>

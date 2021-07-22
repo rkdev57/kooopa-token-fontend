@@ -172,6 +172,9 @@ const defaultConfig = {
     },
   ],
   contractAddress: '0xf6CF0973E406C1b06B7793968D2e7785918CeC2c',
+  walletConnect: {
+    infuraId: '487ddc0aad7f47b8a1590a39c8a6bfa8',
+  },
 };
 
 const dev = {};

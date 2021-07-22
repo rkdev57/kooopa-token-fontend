@@ -5,7 +5,10 @@ export interface State {
 }
 
 const initialState = {
-  wallet: [],
+  wallet: {
+    accounts: [],
+    provider: "",
+  },
 };
 
 type Action = {
