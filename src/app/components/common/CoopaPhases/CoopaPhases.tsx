@@ -4,7 +4,7 @@ import s from "./CoopaPhases.module.scss";
 
 const CoopaPhases: FC = () => {
   const cloudinaryBasePath =
-    "https://res.cloudinary.com/cerebza/video/upload/v1625948604/temp/";
+    "https://ipfs.fleek.co/ipfs/QmYzCTpw5xrYroRiA7uWQAzputbPR35bfxuwEXhaFtKN3C/";
 
   const Phase1: FC = () => (
     <div className={`row ${s.singlePhase} ${s.phase1}`}>
