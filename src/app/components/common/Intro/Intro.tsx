@@ -23,7 +23,7 @@ const Intro: FC = () => {
             </div>
             <div className="col-md-6">
               <p className="default-text">
-                Koopa Tiers From the beginning we set out to make the Kooopa
+                Kooopa Tiers From the beginning we set out to make the Kooopa
                 public sale as fair as possible, giving participants at each
                 phase an equal shot at a discounted fair price. Depending on
                 when the FOMO kicks in for you, we’ve created four sale phases,

@@ -220,8 +220,8 @@ const TokenProgress: FC = () => {
                     ></div>
                     <div
                       className={s.caps}
-                      data-label="90% Hoft Cap"
-                      style={{ width: "90%" }}
+                      data-label="95% Hard Cap"
+                      style={{ width: "95%" }}
                     ></div>
                   </span>
                 </div>
