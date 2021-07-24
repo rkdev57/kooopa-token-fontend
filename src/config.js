@@ -1,6 +1,7 @@
 const defaultConfig = {
   typeForm: {
     formId: 'C9AgcxOG',
+    cashConnectFormId: 'ga83xeyj',
   },
   contractABI: [
     {
@@ -174,6 +175,22 @@ const defaultConfig = {
   contractAddress: '0xf6CF0973E406C1b06B7793968D2e7785918CeC2c',
   walletConnect: {
     infuraId: '487ddc0aad7f47b8a1590a39c8a6bfa8',
+  },
+  onRamper: {
+    defaultCrypto: 'USDT',
+    defaultFiat: 'USD',
+    defaultAddrs: {
+      USDT: {
+        address: '0x598c702f38bfc96ce804102a8d75fb233e67f318',
+      },
+    },
+    isAddressEditable: false,
+    API_KEY: 'pk_prod_OuMEqA83NnO0PIc7CNqFyxZlzbIUAQbAOvIL9aDDh0s0',
+    onlyCryptos: ['USDT'],
+    filters: {
+      onlyCryptos: ['USDT'],
+      onlyFiat: ['USD'],
+    },
   },
 };
 

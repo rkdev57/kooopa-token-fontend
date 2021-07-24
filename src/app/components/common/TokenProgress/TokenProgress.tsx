@@ -6,6 +6,8 @@ import { FC, useEffect, useState } from "react";
 import Web3 from "web3";
 import config from "../../../../config";
 import { useUI } from "../../../contexts/AppContext";
+import { CashWallet } from "../wallets";
+import { DepositAmountMapper } from "./DepositAmountMapper";
 import { FormRule } from "./FormRule";
 import s from "./TokenProgress.module.scss";
 
@@ -18,6 +20,7 @@ const TokenProgress: FC = () => {
   const [isDepositActive, setIsDepositActive] = useState(false);
   const [curentEthValue, setCurrentEthValue] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
+  const [onDepositFormSubmit, setOnDepositFormSubmit] = useState(false);
 
   const ethToKoop = 10000000;
   const phaseDeadline = moment
@@ -44,6 +47,12 @@ const TokenProgress: FC = () => {
   const onFinish = (values: any) => {
     if (!isWalletConnected()) {
       return false;
+    }
+    setOnDepositFormSubmit(true);
+    if (wallet.provider === "cash") {
+      setIsDepositActive(false);
+      setIsLoading(false);
+      return;
     }
     setIsLoading(true);
     const provider = wallet.provider ? wallet.provider : Web3.givenProvider;
@@ -96,7 +105,11 @@ const TokenProgress: FC = () => {
         wrapClassName="typeform-popup"
       >
         <Widget
-          id={config.typeForm.formId}
+          id={
+            wallet.provider === "cash"
+              ? config.typeForm.cashConnectFormId
+              : config.typeForm.formId
+          }
           className="typeform"
           onSubmit={() => {
             setTimeout(() => {
@@ -117,6 +130,15 @@ const TokenProgress: FC = () => {
   };
 
   const DepositAmount = () => {
+    const selectedDepositMethod = DepositAmountMapper[wallet.provider]
+      ? DepositAmountMapper[wallet.provider]
+      : DepositAmountMapper.default;
+
+    const selectedFormRule =
+      wallet.provider === "cash"
+        ? FormRule.cashDepositAmount
+        : FormRule.depositAmount;
+
     return (
       <Modal
         visible={true}
@@ -125,17 +147,21 @@ const TokenProgress: FC = () => {
         className="deposit-popup"
       >
         <Form form={form} onFinish={onFinish}>
-          <b className="form-title">Enter ETH amount</b>
+          <b className="form-title">{selectedDepositMethod.label}</b>
           <div className="amount-wrapper">
-            <Form.Item name="amount" rules={FormRule.depositAmount}>
-              <InputNumber className="amount" placeholder="0.0" step={0.01} />
+            <Form.Item name="amount" rules={selectedFormRule}>
+              <InputNumber
+                className="amount"
+                placeholder="0.0"
+                step={wallet.provider === "cash" ? 1 : 0.01}
+              />
             </Form.Item>
             <div className="currency-wrapper">
-              <img className="icon" src="/images/icons/ethereum.svg" alt="" />
-              <span>ETH</span>
+              <img className="icon" src={selectedDepositMethod.icon} alt="" />
+              <span>{selectedDepositMethod.currency}</span>
             </div>
           </div>
-          <label>Min: 0.01 ETH and Max: 0.5 ETH</label>
+          <label>{selectedDepositMethod.minmumRequired}</label>
 
           <Form.Item>
             <div className="form-action">
@@ -188,6 +214,14 @@ const TokenProgress: FC = () => {
               </button>
               {popupActive && TypeFormComponent()}
               {isDepositActive && DepositAmount()}
+              {onDepositFormSubmit && wallet.provider === "cash" && (
+                <CashWallet
+                  amount={form.getFieldValue("amount")}
+                  onClose={() => {
+                    setOnDepositFormSubmit(false);
+                  }}
+                />
+              )}
 
               <p>1 KOO = 0.0000001 ETH</p>
               <p>1 ETH = 10,000,000 KOO</p>

@@ -15,4 +15,18 @@ export const FormRule = {
       },
     }),
   ],
+  cashDepositAmount: [
+    { required: true, message: "Enter amount" },
+    () => ({
+      validator(_rule: any, value: any) {
+        if ((isDecimalDigit(value) && value < 50) || value > 2000) {
+          return Promise.reject(
+            "Amount should be Min: 50 USD and Max: 2000 USD"
+          );
+        }
+
+        return Promise.resolve();
+      },
+    }),
+  ],
 };

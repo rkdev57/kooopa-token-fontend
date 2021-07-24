@@ -44,6 +44,13 @@ export const ConnectWallet: FC<Props> = ({
     afterWalletConnect(accounts, provider);
   };
 
+  const cashConnect = async () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      afterWalletConnect(["Cash  ..amt"], "cash");
+    }, 1000);
+  };
+
   const afterWalletConnect = (accounts: any, provider = "") => {
     onAccountConnected(accounts);
     setIsLoading(false);
@@ -77,6 +84,13 @@ export const ConnectWallet: FC<Props> = ({
               <img
                 className="wallet-icon small"
                 src="/images/wallets/walletconnect.png"
+                alt=""
+              />
+            </button>
+            <button className="wallet-item" onClick={() => cashConnect()}>
+              <img
+                className="wallet-icon small"
+                src="/images/wallets/cash.png"
                 alt=""
               />
             </button>
