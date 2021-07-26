@@ -24,7 +24,7 @@ const TokenProgress: FC = () => {
 
   const ethToKoop = 10000000;
   const phaseDeadline = moment
-    .utc(moment.utc("2021-08-01 11:59").toDate())
+    .utc(moment.utc("2021-08-01 23:59").toDate())
     .local()
     .format();
   // const phaseDeadline = moment("2021-07-26 11:59").format();
