@@ -5,7 +5,7 @@ const Intro: FC = () => {
   return (
     <div className={s.sectionWrapper}>
       <div className="container">
-        <div className="row mt-5">
+        <div className="row">
           <div className="col-md-6">
             <span className={`d-block default-text`}>
               Steps to participate in token sale with crypto:

@@ -7,7 +7,7 @@ export const DepositAmountMapper: any = {
   },
   cash: {
     label: "Buy with Credit/Debit card (Visa, Mastercard)",
-    icon: "/images/icons/cash.png",
+    icon: "/images/icons/cash-new.png",
     minmumRequired: "Min: 50 USD and Max: 2000 USD",
     currency: "USD",
   },
