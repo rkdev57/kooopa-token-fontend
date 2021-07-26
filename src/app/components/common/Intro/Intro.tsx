@@ -5,15 +5,50 @@ const Intro: FC = () => {
   return (
     <div className={s.sectionWrapper}>
       <div className="container">
-        <span className={`d-block default-text`}>
-          Steps to participate in token sale:
-        </span>
-        <ol>
-          <li>Connect wallet</li>
-          <li>Click Start now</li>
-          <li>Complete the form</li>
-          <li>Follow steps to process deposit</li>
-        </ol>
+        <div className="row mt-5">
+          <div className="col-md-6">
+            <span className={`d-block default-text`}>
+              Steps to participate in token sale with crypto:
+            </span>
+            <ol>
+              <li>Connect wallet via Metamask or WalletConnect</li>
+              <li>Click Start now</li>
+              <li>Complete the form</li>
+              <li>Enter investment amount in ETH</li>
+              <li>Follow steps to process deposit</li>
+              <li>
+                Your ETH has now been successfully deposited to our TGE{" "}
+                <a href="#">contract</a> and your $KOO tokens will be
+                distributed to your ERC-20 wallet at the end of phase 3 of our
+                sale.
+              </li>
+            </ol>
+          </div>
+          <div className="col-md-6">
+            <span className={`d-block default-text`}>
+              Steps to participate in token sale with credit/debit card:
+            </span>
+            <ol>
+              <li>Click on connect wallet and select credit/debit card</li>
+              <li>Click Start now</li>
+              <li>Complete the form</li>
+              <li>Enter investment amount in USD</li>
+              <li>Follow steps to process deposit</li>
+              <li>
+                Complete USDT purchase using your preferred payment method {"&"}
+                seller
+              </li>
+              <li>Wait for email confirmation of your USDT purchase</li>
+              <li>
+                Your USDT purchase has now been successfully deposited to our{" "}
+                TGE {""}
+                <a href="#">wallet</a> and your $KOO tokens will be distributed
+                to your nominated ERC-20 wallet at the end of phase 3 of our
+                sale.
+              </li>
+            </ol>
+          </div>
+        </div>
 
         <div className={s.content}>
           <div className="row">

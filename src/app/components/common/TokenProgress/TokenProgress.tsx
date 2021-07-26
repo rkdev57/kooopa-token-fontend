@@ -24,7 +24,7 @@ const TokenProgress: FC = () => {
 
   const ethToKoop = 10000000;
   const phaseDeadline = moment
-    .utc(moment.utc("2021-07-26 11:59").toDate())
+    .utc(moment.utc("2021-08-01 11:59").toDate())
     .local()
     .format();
   // const phaseDeadline = moment("2021-07-26 11:59").format();
@@ -202,9 +202,9 @@ const TokenProgress: FC = () => {
           <div className="col-md-7">
             <div className={s.content}>
               <span className={`d-block ${s.header}`}>
-                Kooopa Token (KOO) Public Sale Phase 1
+                Kooopa Token (KOO) Public Sale Phase 2
               </span>
-              <p>Individual Cap 0.5 ETH = 5,000,000 KOO</p>
+              <p>Individual Cap 1 ETH = 10,000,000 KOO</p>
 
               <button
                 className={`btn-app-default ${s.buyNow}`}
@@ -223,8 +223,8 @@ const TokenProgress: FC = () => {
                 />
               )}
 
-              <p>1 KOO = 0.0000001 ETH</p>
-              <p>1 ETH = 10,000,000 KOO</p>
+              <p>1 KOO = 0.0000001 ETH/0.00025 USD</p>
+              <p>1 ETH/2,000 USD = 10,000,000 KOO</p>
             </div>
           </div>
           <div className="col-md-5">
@@ -232,7 +232,7 @@ const TokenProgress: FC = () => {
               <div className={s.dataWrapper}>
                 <div className={s.data}>
                   <span className={s.label}>TOTAL AMOUNT</span>
-                  <span className={s.label}>250,000,000 $KOO</span>
+                  <span className={s.label}>750,000,000 $KOO</span>
                 </div>
                 <div className={s.data}>
                   <span className={s.label}>CLOSES IN</span>
@@ -245,7 +245,7 @@ const TokenProgress: FC = () => {
                   <span className={s.progressBar}>
                     <span
                       className={s.bar}
-                      style={{ width: `${curentEthValue / 0.25}%` }}
+                      style={{ width: `${curentEthValue / 0.75}%` }}
                     ></span>
                     <div
                       className={s.caps}
