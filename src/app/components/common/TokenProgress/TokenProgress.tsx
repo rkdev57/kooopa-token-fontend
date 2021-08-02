@@ -24,7 +24,7 @@ const TokenProgress: FC = () => {
 
   const ethToKoop = 10000000;
   const phaseDeadline = moment
-    .utc(moment.utc("2021-08-01 23:59").toDate())
+    .utc(moment.utc("2021-08-08 23:59").toDate())
     .local()
     .format();
   // const phaseDeadline = moment("2021-07-26 11:59").format();
@@ -202,7 +202,7 @@ const TokenProgress: FC = () => {
           <div className="col-md-7">
             <div className={s.content}>
               <span className={`d-block ${s.header}`}>
-                Kooopa Token (KOO) Public Sale Phase 2
+                Kooopa Token (KOO) Public Sale Phase 3
               </span>
               <p>Individual Cap 1 ETH = 10,000,000 KOO</p>
 
