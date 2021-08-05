@@ -223,8 +223,8 @@ const TokenProgress: FC = () => {
                 />
               )}
 
-              <p>1 KOO = 0.0000001 ETH/0.00025 USD</p>
-              <p>1 ETH/2,000 USD = 10,000,000 KOO</p>
+              <p>1 KOO = 0.0000001 ETH/0.0003 USD</p>
+              <p>1 ETH/2,500 USD = 10,000,000 KOO</p>
             </div>
           </div>
           <div className="col-md-5">
@@ -245,7 +245,7 @@ const TokenProgress: FC = () => {
                   <span className={s.progressBar}>
                     <span
                       className={s.bar}
-                      style={{ width: `${curentEthValue / 0.75}%` }}
+                      style={{ width: `60%` }}
                     ></span>
                     <div
                       className={s.caps}
