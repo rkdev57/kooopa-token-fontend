@@ -37,9 +37,9 @@ img {
 
 #main-content,
 .app-footer {
-  @media screen and (max-width: $smallDevices) {
-    display: none !important;
-  }
+  // @media screen and (max-width: $smallDevices) {
+  display: none !important;
+  // }
 }
 
 .typeform-popup {
