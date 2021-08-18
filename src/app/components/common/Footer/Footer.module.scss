@@ -40,28 +40,28 @@
 }
 
 .unSupportedDevice {
-  // display: none;
-  // @media screen and (max-width: $smallDevices) {
-  display: block;
-  height: 100vh;
-  background-color: #092239;
-  background-image: linear-gradient(to bottom, #0b2a44, #02090f);
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  .content {
-    max-width: 700px;
-    background: #000;
-    border-radius: 10px;
-    padding: 4rem 2rem;
-    font-size: 1.5rem;
-    color: #fff;
-    margin-top: 8rem;
-    text-align: center;
-    .logo {
-      max-width: 200px;
-      margin-bottom: 4rem;
+  display: none;
+  @media screen and (max-width: $smallDevices) {
+    display: block;
+    height: 100vh;
+    background-color: #092239;
+    background-image: linear-gradient(to bottom, #0b2a44, #02090f);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    .content {
+      max-width: 700px;
+      background: #000;
+      border-radius: 10px;
+      padding: 4rem 2rem;
+      font-size: 1.5rem;
+      color: #fff;
+      margin-top: 8rem;
+      text-align: center;
+      .logo {
+        max-width: 200px;
+        margin-bottom: 4rem;
+      }
     }
   }
-  //   }
 }

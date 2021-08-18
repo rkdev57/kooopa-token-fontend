@@ -34,12 +34,14 @@ img {
 .text-center {
   text-align: center;
 }
-
+#main-content {
+  min-height: 66.2vh;
+}
 #main-content,
 .app-footer {
-  // @media screen and (max-width: $smallDevices) {
-  display: none !important;
-  // }
+  @media screen and (max-width: $smallDevices) {
+    display: none !important;
+  }
 }
 
 .typeform-popup {

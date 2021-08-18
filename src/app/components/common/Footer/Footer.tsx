@@ -8,9 +8,10 @@ const Footer: FC = () => {
         <img className={s.logo} src="/images/logo.png" alt="" />
         <p>
           {" "}
-          {/* Please use your <b>Desktop</b> to join sale. <br /> Mobile / Tablet
-          device not supported.{" "} */}
-          This round of the Kooopa public token sale is now over. Please contact us at officialkooopatoken on Telegram for any questions.
+          Please use your <b>Desktop</b> to join sale. <br /> Mobile / Tablet
+          device not supported.{" "}
+          {/*  This round of the Kooopa public token sale is now over. Please contact
+          us at officialkooopatoken on Telegram for any questions. */}
         </p>
       </div>
     </div>
