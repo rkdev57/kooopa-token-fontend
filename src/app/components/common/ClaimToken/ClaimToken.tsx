@@ -40,12 +40,17 @@ const ClaimToken: FC = () => {
     if (!isWalletConnected()) {
       return false;
     }
-    return;
-
-    setIsLoading(true);
 
     const { walletAddress } = values;
-    const isExists = SaleUserWalletAddress.includes(walletAddress);
+    if (wallet.accounts[0] != walletAddress) {
+      notification.error({
+        message: "Please connect this address with wallet!",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+    // const isExists = SaleUserWalletAddress.includes(walletAddress);
     /* if (!isExists) {
       notification.error({ message: "The address has no available claim" });
       setIsLoading(false);
@@ -61,34 +66,28 @@ const ClaimToken: FC = () => {
       config.transfer.contractAddress
     );
 
-    /* contract.methods
-      .transfer(toAddress, value)
-      .send({ from: fromAddress })
-      .on("transactionHash", function (hash: any) {
-        console.log(hash);
+    TGEContract.methods
+      .faucet()
+      .send({ from: walletAddress })
+      .catch((e: any) => {
+        console.log(e);
       })
-      .then(() => {
+      .finally(() => {
         setIsLoading(false);
-      }); */
-
-    /* TGEContract.methods
-      .transfer("0x44f093c581e73ad04bee3c234c9607bb07368ef1", value)
-      // .transfer(wallet.accounts[0], value)
-      .send({
-        from: config.transfer.fromAddress,
-      })
-      .on("transactionHash", function (hash: any) {
-        console.log(hash);
-      })
-      .then(() => {
-        setIsLoading(false);
-      }); */
+      });
   };
 
   const isAddressValid = () => {
     if (!form.getFieldValue("walletAddress")) {
       return false;
     }
+    const test =
+      !form.isFieldsTouched(true) ||
+      !!form.getFieldsError().filter(({ errors }) => errors.length).length;
+    console.log(
+      "🚀 ~ file: ClaimToken.tsx ~ line 88 ~ isAddressValid ~ test",
+      test
+    );
     return (
       !form.isFieldsTouched(true) ||
       !!form.getFieldsError().filter(({ errors }) => errors.length).length
@@ -139,16 +138,19 @@ const ClaimToken: FC = () => {
                 >
                   Back
                 </button>
-                <Form.Item>
-                  <Button
-                    type="primary"
-                    htmlType="submit"
-                    loading={isLoading}
-                    disabled={true}
-                    className={`btn-app-default ${s.btnAction}`}
-                  >
-                    Claim
-                  </Button>
+
+                <Form.Item shouldUpdate>
+                  {() => (
+                    <Button
+                      type="primary"
+                      htmlType="submit"
+                      loading={isLoading}
+                      // disabled={!isAddressValid()}
+                      className={`btn-app-default ${s.btnAction}`}
+                    >
+                      Claim
+                    </Button>
+                  )}
                 </Form.Item>
               </div>
             </div>
