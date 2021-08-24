@@ -19,7 +19,7 @@ const Header: FC = () => {
         <div className={s.headerItems}>
           <img
             className={`img-fluid ${s.logo}`}
-            src="/images/logo.png"
+            src="/images/koo-logo-yellow.svg"
             alt=""
           />
           <div>

@@ -1,12 +1,22 @@
 import { FC } from "react";
-import { ClaimToken, CoopaPhases, Intro, TokenProgress } from "../../common";
+import { PresaleToken } from "../../common";
+import JoinTelegram from "../../common/JoinTelegram";
+import AboutUs from "./AboutUs";
 import s from "./Home.module.scss";
+import TokenDistribution from "./TokenDistribution";
+import TokenUtility from "./TokenUtility";
 
 const Home: FC = () => {
   return (
     <>
       <div className={s.commonGroup}>
-        <ClaimToken />
+        <PresaleToken />
+        <TokenUtility />
+        <TokenDistribution />
+        <JoinTelegram />
+        <AboutUs />
+
+        {/* <ClaimToken /> */}
         {/* <TokenProgress />
         <Intro />
         <CoopaPhases /> */}

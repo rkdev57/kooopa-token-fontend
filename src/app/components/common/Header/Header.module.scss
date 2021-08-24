@@ -1,9 +1,12 @@
 @import "/src/app/styles/variables.scss";
 
 .header {
-  background: #000000;
+  // background: #0f1014;
   z-index: 2;
   position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
   .headerItems {
     display: flex;
     align-items: center;
@@ -13,18 +16,18 @@
     @media screen and (max-width: $smallDevices) {
       justify-content: center;
     }
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 100%;
-      bottom: -2px;
-      height: 2px;
-      background: #16548a;
-    }
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   left: 0;
+    //   width: 100%;
+    //   bottom: -2px;
+    //   height: 2px;
+    //   background: #16548a;
+    // }
   }
   .logo {
-    height: 6rem;
+    height: 3rem;
   }
   .btnAction {
     // display: none !important;

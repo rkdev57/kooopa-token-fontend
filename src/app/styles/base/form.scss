@@ -1,17 +1,17 @@
 .btn-app-default {
-  background: #fff !important;
+  background: $secondary !important;
   font-family: $heading-font !important;
-  color: $primary !important;
+  color: $defaultTextColor !important;
   font-weight: 700 !important;
   font-size: 22px !important;
   border: 0 !important;
   text-decoration: none !important;
-  padding: 1rem 2rem !important;
+  padding: 0.6rem 1.3rem !important;
   border-radius: 2rem !important;
   cursor: pointer !important;
   transform: scale(1) !important;
   transition: transform 0.2s ease-in !important;
-  box-shadow: -1px 1px 30px -4px rgba(255, 255, 255, 0.78) !important;
+  box-shadow: -1px 1px 20px -4px rgba(255, 225, 36, 0.78) !important;
   height: unset !important;
   &:hover {
     transform: scale(1.05) !important;

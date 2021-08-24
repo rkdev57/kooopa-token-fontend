@@ -1,0 +1,35 @@
+@import "/src/app/styles/variables.scss";
+
+.container {
+  .content {
+    background: $secondary;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-top: 3rem;
+    align-items: center;
+    .icon {
+      height: 100px;
+      width: unset;
+    }
+    .title {
+      font-weight: 800;
+      font-family: $heading-font;
+      font-size: 1.5rem;
+      margin-bottom: 0;
+    }
+    .joinUs {
+      display: flex;
+      align-items: center;
+      padding-right: 2rem;
+    }
+    .btnAction {
+      background: $defaultTextColor !important;
+      color: #fff !important;
+      display: inline-block;
+      cursor: pointer;
+      margin-left: 2rem;
+    }
+  }
+}

@@ -13,7 +13,7 @@ const App: FC = () => {
       <div id="main-content">
         <AppRouter />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </ManagedUIContext>
   );
 };
