@@ -41,8 +41,8 @@ const PresaleToken: FC = () => {
         >
           <div className={s.content}>
             <span className={s.subTitlte}>
-              Kooopa Racing League (KRL) is a fast-paced arcade style kart
-              racing NFT game where anyone can earn through skilled gameplay and
+              Kart Racing League (KRL) is a fast-paced arcade style kart racing
+              NFT game where anyone can earn through skilled gameplay and
               contributions to the ecosystem. KOO is the glue that binds all KRL
               community members together.
             </span>
