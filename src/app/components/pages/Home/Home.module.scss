@@ -1,8 +1,8 @@
 @import "/src/app/styles/variables.scss";
 
 .commonGroup {
-  background-color: #0f1014;
-  background-image: linear-gradient(to bottom, #2f2c2c, #0f1014);
+  background-color: $defaultTextColor;
+  // background-image: linear-gradient(to bottom, #2f2c2c, #0f1014);
   min-height: 66.2vh;
   padding-top: 3rem;
 }

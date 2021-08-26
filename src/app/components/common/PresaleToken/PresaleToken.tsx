@@ -13,7 +13,7 @@ const PresaleToken: FC = () => {
               alt=""
             />
           </div>
-          <div className="col-md-5 d-flex align-items-center">
+          <div className="col-md-7 d-flex align-items-center">
             <div className={s.content}>
               <h1 className={s.heading}>
                 <span>KOO</span>, the ERC-20 governance token for the KRL
@@ -33,7 +33,7 @@ const PresaleToken: FC = () => {
 
         <div
           className={s.preSaleBanner}
-          style={{ backgroundImage: 'url("/images/other/discover-bg.png")' }}
+          style={{ backgroundImage: 'url("/images/other/main-banner.png")' }}
         >
           <div className={s.content}>
             <span className={s.subTitlte}>

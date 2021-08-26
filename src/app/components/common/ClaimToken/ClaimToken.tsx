@@ -15,7 +15,11 @@ import { FormRule } from "./FormRule";
 import s from "./ClaimToken.module.scss";
 import { SaleUserWalletAddress } from "../../../store/data/SaleUserWalletAddress";
 
-const ClaimToken: FC = () => {
+interface Props {
+  onClose: any;
+}
+
+const ClaimToken: FC<Props> = ({ onClose }) => {
   const { wallet } = useUI();
   const [form] = Form.useForm();
   const [isLoading, setIsLoading] = useState(false);
@@ -107,6 +111,7 @@ const ClaimToken: FC = () => {
   return (
     <div className={s.container}>
       <div className={s.content}>
+        <div className={s.close} onClick={onClose}></div>
         <h3 className={s.title}>Claim your Kooopa token</h3>
         {!isCheckAvailabilty && (
           <div className={s.checkAvailibity}>

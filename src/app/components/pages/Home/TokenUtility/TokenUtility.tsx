@@ -6,7 +6,7 @@ const TokenUtility: FC = () => {
     <div className={s.container}>
       <div className="container">
         <div className="row">
-          <div className={`col-md-6 d-flex align-items-center`}>
+          <div className={`col-md-12 d-flex align-items-center`}>
             <div className={s.content}>
               <h3 className={s.heading}>KOO Utility</h3>
             </div>
@@ -14,11 +14,7 @@ const TokenUtility: FC = () => {
           <div className="col-md-6">
             <div className={s.contentWrapper}>
               <div className={s.iconWrapper}>
-                <img
-                  className={s.icon}
-                  src="/images/icons/marketplace.svg"
-                  alt=""
-                />
+                <img className={s.icon} src="/images/icons/esport.svg" alt="" />
               </div>
               <div className={s.content}>
                 <h3 className={s.title}>E-Sports and Tournaments</h3>
@@ -42,7 +38,7 @@ const TokenUtility: FC = () => {
               <div className={s.iconWrapper}>
                 <img
                   className={s.icon}
-                  src="/images/icons/tipping.svg"
+                  src="/images/icons/staking.svg"
                   alt=""
                 />
               </div>
@@ -61,7 +57,7 @@ const TokenUtility: FC = () => {
               <div className={s.iconWrapper}>
                 <img
                   className={s.icon}
-                  src="/images/icons/sharing.svg"
+                  src="/images/icons/payment.svg"
                   alt=""
                 />
               </div>
@@ -81,7 +77,7 @@ const TokenUtility: FC = () => {
               <div className={s.iconWrapper}>
                 <img
                   className={s.icon}
-                  src="/images/icons/sharing.svg"
+                  src="/images/icons/governance.svg"
                   alt=""
                 />
               </div>

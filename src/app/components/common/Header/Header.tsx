@@ -1,11 +1,13 @@
 import { notification } from "antd";
 import { FC, useState } from "react";
+import ClaimToken from "../ClaimToken";
 import ConnectWallet from "../ConnectWallet";
 
 import s from "./Header.module.scss";
 
 const Header: FC = () => {
   const [openConnectWallet, setConnectWallet] = useState(false);
+  const [claimToken, setClaimToken] = useState(false);
   const [account, setAccount] = useState("");
 
   const copyWalletAddress = () => {
@@ -44,6 +46,12 @@ const Header: FC = () => {
                 />
               </button>
             )}
+            <button
+              className={`btn-app-default ml-2 ${s.btnAction} ${s.walletDetails} ${s.claimToken}`}
+              onClick={() => setClaimToken(!claimToken)}
+            >
+              Claim
+            </button>
           </div>
         </div>
         <ConnectWallet
@@ -55,6 +63,14 @@ const Header: FC = () => {
             }
           }}
         />
+
+        {claimToken && (
+          <ClaimToken
+            onClose={() => {
+              setClaimToken(false);
+            }}
+          />
+        )}
       </div>
     </div>
   );

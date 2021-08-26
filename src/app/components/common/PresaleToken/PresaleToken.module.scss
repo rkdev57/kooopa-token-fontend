@@ -1,7 +1,7 @@
 @import "/src/app/styles/variables.scss";
 
 .container {
-  padding: 4rem 0;
+  padding: 4rem 0 4rem 0;
   .logo {
     max-width: 300px;
   }
@@ -15,12 +15,13 @@
   }
   .content {
     color: #fff;
+    padding: 6rem 0;
     .heading {
       color: #fff;
       line-height: 1.2;
       font-family: $heading-font;
       font-weight: 800;
-      font-size: 1.9rem;
+      font-size: 1.8rem;
       span {
         color: $secondary;
       }
@@ -35,28 +36,32 @@
     }
   }
   .preSaleBanner {
-    background: $secondary no-repeat 0 95%;
-    min-height: 400px;
+    // background: $secondary no-repeat 0 95%;
+    min-height: 536px;
     border-radius: 2rem;
     background-size: contain;
+    background-repeat: no-repeat;
     display: flex;
-    align-items: center;
     justify-content: end;
+    text-align: right;
     margin-top: 4rem;
     .content {
       color: $defaultTextColor;
-      max-width: 63%;
+      max-width: 46%;
+      margin-right: 2rem;
+      margin-top: 2rem;
+      padding: 0;
       .subTitlte {
         font-family: $heading-font;
         display: block;
         font-weight: 800;
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 1.3;
         letter-spacing: 0.3px;
       }
     }
     .btnAction {
-      margin-top: 3rem;
+      margin-top: 1rem;
       background: $defaultTextColor !important;
       color: #fff !important;
       display: inline-block;

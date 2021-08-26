@@ -2,13 +2,16 @@
 
 .container {
   .content {
-    background: $secondary;
+    // background: $secondary;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     border-radius: 1rem;
     overflow: hidden;
     margin-top: 3rem;
     align-items: center;
+    height: 162px;
+    background-repeat: no-repeat;
+    background-size: contain;
     .icon {
       height: 100px;
       width: unset;

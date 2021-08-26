@@ -5,12 +5,10 @@ const JoinTelegram: FC = () => {
   return (
     <div className={s.container}>
       <div className="container">
-        <div className={s.content}>
-          <img
-            className={`img-fluid ${s.icon}`}
-            src="/images/other/bxr-token_bg.png"
-            alt=""
-          />
+        <div
+          className={s.content}
+          style={{ backgroundImage: 'url("/images/other/join-telegram.png")' }}
+        >
           <div className={s.joinUs}>
             <h3 className={s.title}>Join the KRL group on Telegram</h3>
             <a className={`btn-app-default ${s.btnAction}`}>Join Now</a>
