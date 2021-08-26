@@ -15,14 +15,28 @@ const Header: FC = () => {
     notification.success({ message: "Copied" });
   };
 
-  const connectWallet = () => {
+  const beforeActionCheck = () => {
     if (window.innerWidth <= 1024) {
       notification.error({
-        message: "Connect wallet only supported on desktop",
+        message: "Only available on desktop",
       });
+      return false;
+    }
+    return true;
+  };
+
+  const connectWallet = () => {
+    if (!beforeActionCheck()) {
       return;
     }
     setConnectWallet(true);
+  };
+
+  const claimAirdrop = () => {
+    if (!beforeActionCheck()) {
+      return;
+    }
+    setClaimToken(!claimToken);
   };
 
   return (
@@ -59,7 +73,7 @@ const Header: FC = () => {
             )}
             <button
               className={`btn-app-default ml-2 ${s.btnAction} ${s.walletDetails} ${s.claimToken}`}
-              onClick={() => setClaimToken(!claimToken)}
+              onClick={claimAirdrop}
             >
               Airdrop
             </button>

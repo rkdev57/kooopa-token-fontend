@@ -64,9 +64,9 @@
   }
   .claimToken {
     background: #fff !important;
-    @media screen and (max-width: $smallDevices) {
-      display: none !important;
-    }
+    // @media screen and (max-width: $smallDevices) {
+    //   display: none !important;
+    // }
   }
   .btnAction {
     // display: none !important;
@@ -87,6 +87,7 @@
   .connectWallet {
     @media screen and (max-width: $smallDevices) {
       font-size: 1rem !important;
+      display: none !important;
     }
   }
 }
