@@ -27,6 +27,7 @@ const Header: FC = () => {
 
   return (
     <div className={s.header}>
+      <div className={s.shadowGlow}></div>
       <div className="container">
         <div className={s.headerItems}>
           <img
