@@ -49,12 +49,24 @@
     justify-content: flex-end;
     text-align: right;
     margin-top: 4rem;
+    @media screen and (max-width: $smallDevices) {
+      background-color: $secondary;
+      min-height: unset;
+    }
     .content {
       color: $defaultTextColor;
       max-width: 46%;
       margin-right: 2rem;
       margin-top: 2rem;
       padding: 0;
+      @media screen and (max-width: $smallDevices) {
+        margin-top: 10rem;
+        padding: 1rem;
+        max-width: 100%;
+        text-align: center;
+        margin-right: 0;
+        padding-bottom: 2rem;
+      }
       .subTitlte {
         font-family: $heading-font;
         display: block;

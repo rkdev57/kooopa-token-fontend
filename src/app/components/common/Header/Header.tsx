@@ -15,6 +15,16 @@ const Header: FC = () => {
     notification.success({ message: "Copied" });
   };
 
+  const connectWallet = () => {
+    if (window.innerWidth <= 1024) {
+      notification.error({
+        message: "Connect wallet only supported on desktop",
+      });
+      return;
+    }
+    setConnectWallet(true);
+  };
+
   return (
     <div className={s.header}>
       <div className="container">
@@ -28,7 +38,7 @@ const Header: FC = () => {
             {!account && (
               <button
                 className={`btn-app-default ${s.btnAction} ${s.connectWallet}`}
-                onClick={() => setConnectWallet(true)}
+                onClick={connectWallet}
               >
                 Connect Wallet
               </button>

@@ -12,6 +12,15 @@
     height: 162px;
     background-repeat: no-repeat;
     background-size: contain;
+    @media screen and (max-width: $smallDevices) {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      background-color: $secondary;
+      height: unset;
+      padding-bottom: 1rem;
+      margin-bottom: 4rem;
+    }
     .icon {
       height: 100px;
       width: unset;
@@ -21,11 +30,20 @@
       font-family: $heading-font;
       font-size: 1.5rem;
       margin-bottom: 0;
+      @media screen and (max-width: $smallDevices) {
+        font-size: 1.2rem;
+      }
     }
     .joinUs {
       display: flex;
       align-items: center;
       padding-right: 2rem;
+      @media screen and (max-width: $smallDevices) {
+        flex-direction: column;
+        padding-right: 0;
+        margin-top: 4rem;
+        padding: 5px;
+      }
     }
     .btnAction {
       background: $defaultTextColor !important;
@@ -33,6 +51,10 @@
       display: inline-block;
       cursor: pointer;
       margin-left: 2rem;
+      @media screen and (max-width: $smallDevices) {
+        margin-top: 1rem;
+        margin-left: 0;
+      }
     }
   }
 }

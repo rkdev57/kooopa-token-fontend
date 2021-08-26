@@ -29,12 +29,14 @@ const TokenDistribution: FC = () => {
   const chartOptions: any = {
     series: [25, 17.5, 15, 19, 11, 9, 3.5],
     chart: {
-      height: 500,
       type: "radialBar",
     },
     options: {
       stroke: {
         lineCap: "round",
+      },
+      chart: {
+        // hight: 700,
       },
       selection: {
         enabled: false,
@@ -133,18 +135,36 @@ const TokenDistribution: FC = () => {
           vertical: 3,
         },
       },
-    },
-
-    responsive: [
-      {
-        breakpoint: 480,
-        options: {
-          legend: {
-            show: false,
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            legend: {
+              show: false,
+              floating: true,
+              position: "bottom",
+              horizontalAlign: "center",
+              offsetX: 0,
+              offsetY: 100,
+            },
+            plotOptions: {
+              radialBar: {
+                dataLabels: {
+                  value: {
+                    fontSize: "20px",
+                  },
+                  style: {
+                    colors: ["#fff"],
+                    fontSize: "30px",
+                    fontWeight: "800",
+                  },
+                },
+              },
+            },
           },
         },
-      },
-    ],
+      ],
+    },
   };
 
   return (
@@ -173,11 +193,19 @@ const TokenDistribution: FC = () => {
           </div>
           <div className="col-md-7">
             <div className={s.chartWrapper}>
+              <div className={s.mobileLegend}>
+                <li>E-Sports {"&"} Tournaments: 25%</li>
+                <li>Staking Rewards: 17.5%</li>
+                <li>KRL Platform Fund: 15%</li>
+                <li>Blue Monster Games (Core team): 19%</li>
+                <li>Advisors: 11%</li>
+                <li>Public Sale: 9%</li>
+                <li>Private Sale: 3.5%</li>
+              </div>
               <Chart
                 options={chartOptions.options}
                 type="radialBar"
-                width={600}
-                height={chartOptions.chart.height}
+                width={"100%"}
                 series={chartOptions.series}
               />
             </div>

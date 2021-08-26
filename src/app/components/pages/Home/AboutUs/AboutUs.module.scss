@@ -9,6 +9,9 @@
       font-size: 1.7rem;
       font-weight: 800;
       max-width: 400px;
+      @media screen and (max-width: $smallDevices) {
+        font-size: 1.3rem;
+      }
     }
   }
   .content {
@@ -21,6 +24,11 @@
     display: flex;
     flex-direction: column;
     align-items: self-start;
+    @media screen and (max-width: $smallDevices) {
+      height: unset;
+      margin-bottom: 1rem;
+      padding-bottom: 2.5rem;
+    }
     .btnAction {
       display: inline-block;
       margin-top: 1rem;
