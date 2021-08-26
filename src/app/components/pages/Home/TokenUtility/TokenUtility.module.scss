@@ -48,13 +48,15 @@
     .iconWrapper {
       background: #2d2c2c;
       padding: 1rem;
-      width: 156px;
+      min-width: 80px;
+      width: 80px;
       margin-right: 2rem;
       margin-top: 8px;
       border-radius: 10px;
       text-align: center;
       @media screen and (max-width: $smallDevices) {
         width: 70px;
+        min-width: 70px;
       }
       .icon {
         max-width: 100%;
