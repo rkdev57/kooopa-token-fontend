@@ -7,6 +7,22 @@
   position: absolute;
   left: 0;
   right: 0;
+  z-index: 0;
+  &::before {
+    content: "";
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+      ellipse 50% 50%,
+      rgba($secondary, 0.43),
+      transparent
+    );
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transform: translate(-32%, -24%);
+  }
   .headerItems {
     display: flex;
     align-items: center;
@@ -14,7 +30,8 @@
     padding: 1rem 2rem;
     position: relative;
     @media screen and (max-width: $smallDevices) {
-      justify-content: center;
+      // justify-content: center;
+      padding: 1rem 0;
     }
     // &::after {
     //   content: "";
@@ -28,6 +45,9 @@
   }
   .logo {
     height: 3rem;
+    @media screen and (max-width: $smallDevices) {
+      height: 2rem;
+    }
   }
   .claimToken {
     background: #fff !important;
@@ -47,8 +67,10 @@
         transition: transform 0.1s ease-in;
       }
     }
+  }
+  .connectWallet {
     @media screen and (max-width: $smallDevices) {
-      display: none;
+      display: none !important;
     }
   }
 }

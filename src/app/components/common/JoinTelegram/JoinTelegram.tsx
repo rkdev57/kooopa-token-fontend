@@ -11,7 +11,13 @@ const JoinTelegram: FC = () => {
         >
           <div className={s.joinUs}>
             <h3 className={s.title}>Join the KRL group on Telegram</h3>
-            <a className={`btn-app-default ${s.btnAction}`}>Join Now</a>
+            <a
+              href="https://t.me/kartracingleague"
+              target="_blank"
+              className={`btn-app-default ${s.btnAction}`}
+            >
+              Join Now
+            </a>
           </div>
         </div>
       </div>

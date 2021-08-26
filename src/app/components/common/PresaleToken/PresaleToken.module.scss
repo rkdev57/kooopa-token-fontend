@@ -12,10 +12,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
   }
   .content {
     color: #fff;
     padding: 6rem 0;
+    @media screen and (max-width: $smallDevices) {
+      padding: 2rem 0;
+    }
     .heading {
       color: #fff;
       line-height: 1.2;
@@ -42,7 +46,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     text-align: right;
     margin-top: 4rem;
     .content {

@@ -46,7 +46,7 @@ const TokenUtility: FC = () => {
                 <h3 className={s.title}>Staking</h3>
                 <p>
                   Players will be able to lock up their tokens to receive newly
-                  created AXS. Stakers will also be required to vote and play to
+                  created KOO. Stakers will also be required to vote and play to
                   claim rewards.
                 </p>
               </div>

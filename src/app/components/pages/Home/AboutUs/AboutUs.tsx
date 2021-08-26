@@ -12,7 +12,7 @@ const AboutUs: FC = () => {
                 Read the full Kooopa Racing League whitepape
               </h3>
               <a
-                href="https://kooopa-racing-league.gitbook.io/kooopa-racing-league"
+                href="https://whitepaper.kartracingleague.com/"
                 target="_blank"
                 className={`btn-app-default ${s.btnAction}`}
               >

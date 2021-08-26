@@ -43,7 +43,7 @@ const PresaleToken: FC = () => {
               community members together.
             </span>
             <a
-              href="https://kooopa-racing-league.gitbook.io/kooopa-racing-league"
+              href="https://whitepaper.kartracingleague.com/"
               target="_blank"
               className={`btn-app-default ${s.btnAction}`}
             >

@@ -36,6 +36,16 @@ const TokenDistribution: FC = () => {
       stroke: {
         lineCap: "round",
       },
+      selection: {
+        enabled: false,
+      },
+      states: {
+        hover: {
+          filter: {
+            type: "none",
+          },
+        },
+      },
       plotOptions: {
         radialBar: {
           offsetY: 0,
@@ -145,13 +155,15 @@ const TokenDistribution: FC = () => {
             <div className="content">
               <h3 className={s.heading}>Token Distribution</h3>
               <p>
-                Kooopa Racing League (KRL) is a fast-paced arcade style kart
-                racing NFT game where anyone can earn through skilled gameplay
-                and contributions to the ecosystem. KOO is the glue that binds
-                all KRL community members together.
+                KOO will be unlocked in a pre-determined schedule which lasts
+                for 36 months from the public sale. The initial circulating
+                supply is set to 3,000,000,000 KOO - 30% of the total supply.
+                The below chart illustrates the maximum possible issuance of KOO
+                over the coming years, and the total supply will never exceed
+                10,000,000,000
               </p>
               <a
-                href="https://kooopa-racing-league.gitbook.io/kooopa-racing-league"
+                href="https://whitepaper.kartracingleague.com/"
                 target="_blank"
                 className={`btn-app-default ${s.btnAction}`}
               >
@@ -178,10 +190,8 @@ const TokenDistribution: FC = () => {
                 KOO <span>Public Sale</span>
               </h3>
               <p>
-                Kooopa Racing League (KRL) is a fast-paced arcade style kart
-                racing NFT game where anyone can earn through skilled gameplay
-                and contributions to the ecosystem. KOO is the glue that binds
-                all KRL community members together.
+                KOO represents a real slice of the KRL game universe as it has
+                governance rights and fee sharing built into it.
               </p>
             </div>
             <div className="col-md-7">

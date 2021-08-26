@@ -27,7 +27,7 @@ const Header: FC = () => {
           <div>
             {!account && (
               <button
-                className={`btn-app-default ${s.btnAction}`}
+                className={`btn-app-default ${s.btnAction} ${s.connectWallet}`}
                 onClick={() => setConnectWallet(true)}
               >
                 Connect Wallet
@@ -35,7 +35,7 @@ const Header: FC = () => {
             )}
             {account && (
               <button
-                className={`btn-app-default ${s.btnAction} ${s.walletDetails}`}
+                className={`btn-app-default ${s.btnAction} ${s.walletDetails} ${s.connectWallet}`}
                 onClick={() => copyWalletAddress()}
               >
                 {account.slice(0, 6)}...{account.slice(-4)}

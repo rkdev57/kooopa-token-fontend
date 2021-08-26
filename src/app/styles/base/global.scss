@@ -41,7 +41,7 @@ img {
 #main-content,
 .app-footer {
   @media screen and (max-width: $smallDevices) {
-    display: none !important;
+    // display: none !important;
   }
 }
 
@@ -142,7 +142,7 @@ img {
     .currency-wrapper {
       min-width: 4rem;
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
       align-items: center;
     }
     .icon {

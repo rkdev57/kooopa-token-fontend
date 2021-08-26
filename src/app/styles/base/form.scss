@@ -21,4 +21,7 @@
     box-shadow: none !important;
     pointer-events: none !important;
   }
+  @media screen and (max-width: $smallDevices) {
+    padding: 0.4rem 1.3rem !important;
+  }
 }
