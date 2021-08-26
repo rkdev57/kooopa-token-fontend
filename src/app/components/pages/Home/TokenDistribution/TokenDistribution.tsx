@@ -150,7 +150,11 @@ const TokenDistribution: FC = () => {
                 and contributions to the ecosystem. KOO is the glue that binds
                 all KRL community members together.
               </p>
-              <a className={`btn-app-default ${s.btnAction}`}>
+              <a
+                href="https://kooopa-racing-league.gitbook.io/kooopa-racing-league"
+                target="_blank"
+                className={`btn-app-default ${s.btnAction}`}
+              >
                 Read Whitepaper
               </a>
             </div>

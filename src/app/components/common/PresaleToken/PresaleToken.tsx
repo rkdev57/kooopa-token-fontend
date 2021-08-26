@@ -42,7 +42,13 @@ const PresaleToken: FC = () => {
               contributions to the ecosystem. KOO is the glue that binds all KRL
               community members together.
             </span>
-            <a className={`btn-app-default ${s.btnAction}`}>Read Whitepaper</a>
+            <a
+              href="https://kooopa-racing-league.gitbook.io/kooopa-racing-league"
+              target="_blank"
+              className={`btn-app-default ${s.btnAction}`}
+            >
+              Read Whitepaper
+            </a>
           </div>
         </div>
       </div>
