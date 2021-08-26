@@ -17,6 +17,10 @@ export const SectionData = {
       value: "ERC 20 compliant with ERC-655",
     },
     {
+      label: "Public Sale Price (USD)",
+      value: "0.0006",
+    },
+    {
       label: "Token Distribution",
       value: "Immediately after purchase",
     },

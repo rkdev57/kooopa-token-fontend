@@ -27,6 +27,10 @@ const PresaleToken: FC = () => {
               <span className={s.startingSoon}>
                 KOO Public Sale Round 2 Starting Soon
               </span>
+
+              <a className={`btn-app-default ${s.joinWaitlist}`}>
+                Join Waitlist
+              </a>
             </div>
           </div>
         </div>

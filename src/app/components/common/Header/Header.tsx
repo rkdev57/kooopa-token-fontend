@@ -61,7 +61,7 @@ const Header: FC = () => {
               className={`btn-app-default ml-2 ${s.btnAction} ${s.walletDetails} ${s.claimToken}`}
               onClick={() => setClaimToken(!claimToken)}
             >
-              Claim
+              Airdrop
             </button>
           </div>
         </div>

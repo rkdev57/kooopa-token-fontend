@@ -182,13 +182,18 @@ const TokenDistribution: FC = () => {
                 over the coming years, and the total supply will never exceed
                 10,000,000,000
               </p>
-              <a
+              <span className={s.startingSoon}>
+                KOO Public Sale Round 2 Starting Soon
+              </span>
+
+              <a className={`btn-app-default ${s.btnAction}`}>Join Waitlist</a>
+              {/* <a
                 href="https://whitepaper.kartracingleague.com/"
                 target="_blank"
                 className={`btn-app-default ${s.btnAction}`}
               >
                 Read Whitepaper
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="col-md-7">
