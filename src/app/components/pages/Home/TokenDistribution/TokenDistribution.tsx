@@ -186,7 +186,13 @@ const TokenDistribution: FC = () => {
                 KOO Public Sale Round 2 Starting Soon
               </span>
 
-              <a className={`btn-app-default ${s.btnAction}`}>Join Waitlist</a>
+              <a
+                href="https://lnarw4vdngy.typeform.com/to/nblkTzUD"
+                target="_blank"
+                className={`btn-app-default ${s.btnAction}`}
+              >
+                Join Waitlist
+              </a>
               {/* <a
                 href="https://whitepaper.kartracingleague.com/"
                 target="_blank"

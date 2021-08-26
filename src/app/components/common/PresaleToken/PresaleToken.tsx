@@ -28,7 +28,11 @@ const PresaleToken: FC = () => {
                 KOO Public Sale Round 2 Starting Soon
               </span>
 
-              <a className={`btn-app-default ${s.joinWaitlist}`}>
+              <a
+                href="https://lnarw4vdngy.typeform.com/to/nblkTzUD"
+                target="_blank"
+                className={`btn-app-default ${s.joinWaitlist}`}
+              >
                 Join Waitlist
               </a>
             </div>
