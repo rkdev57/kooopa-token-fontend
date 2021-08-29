@@ -1,4 +1,5 @@
 import { FC } from "react";
+import TokenProgress, { KoopaInvest } from "../TokenProgress";
 import s from "./PresaleToken.module.scss";
 
 const PresaleToken: FC = () => {
@@ -24,17 +25,20 @@ const PresaleToken: FC = () => {
                 signaling their support for upgrades to the ecosystem and
                 directing usage of a Community Treasury.
               </p>
-              <span className={s.startingSoon}>
+              {/* <span className={s.startingSoon}>
                 KOO Public Sale Round 2 Starting Soon
-              </span>
+              </span> */}
 
-              <a
+              {/* <a
                 href="https://lnarw4vdngy.typeform.com/to/nblkTzUD"
                 target="_blank"
                 className={`btn-app-default ${s.joinWaitlist}`}
               >
                 Join Waitlist
-              </a>
+              </a> */}
+              <div className={`${s.joinWaitlist}`}>
+                <KoopaInvest />
+              </div>
             </div>
           </div>
         </div>

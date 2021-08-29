@@ -2,6 +2,7 @@ import { FC } from "react";
 import { SectionData } from "./SectionData";
 import Chart from "react-apexcharts";
 import s from "./TokenDistribution.module.scss";
+import { KoopaInvest } from "../../../common/TokenProgress";
 
 const TokenDistribution: FC = () => {
   interface ListItemInterface {
@@ -182,17 +183,19 @@ const TokenDistribution: FC = () => {
                 over the coming years, and the total supply will never exceed
                 10,000,000,000
               </p>
-              <span className={s.startingSoon}>
+              {/* <span className={s.startingSoon}>
                 KOO Public Sale Round 2 Starting Soon
-              </span>
-
-              <a
+              </span> */}
+              <div className={`${s.joinWaitlist}`}>
+                <KoopaInvest />
+              </div>
+              {/* <a
                 href="https://lnarw4vdngy.typeform.com/to/nblkTzUD"
                 target="_blank"
                 className={`btn-app-default ${s.btnAction}`}
               >
                 Join Waitlist
-              </a>
+              </a> */}
               {/* <a
                 href="https://whitepaper.kartracingleague.com/"
                 target="_blank"

@@ -5,9 +5,9 @@ export const FormRule = {
     { required: true, message: "Enter amount" },
     () => ({
       validator(_rule: any, value: any) {
-        if ((isDecimalDigit(value) && value < 0.01) || value > 0.5) {
+        if ((isDecimalDigit(value) && value < 0.05) || value > 1.5) {
           return Promise.reject(
-            "Amount should be Min: 0.01 ETH and Max: 0.5 ETH"
+            "Amount should be Min: 0.05 ETH and Max: 1.5 ETH"
           );
         }
 

@@ -132,6 +132,28 @@ img {
     justify-content: space-between;
     margin-top: 2rem;
   }
+  .accept--tnc {
+    label {
+      color: $color-cyan;
+      display: flex;
+      a {
+        color: $color-cyan;
+        border-bottom: 1px solid $color-cyan;
+      }
+    }
+  }
+  .ant-checkbox-checked .ant-checkbox-inner::after {
+    border-color: $color-cyan;
+  }
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #222828;
+    border-color: $color-cyan;
+  }
+  .ant-checkbox-checked {
+    &:after {
+      border-color: $color-cyan;
+    }
+  }
   .amount-wrapper {
     display: flex;
     justify-content: space-between;
