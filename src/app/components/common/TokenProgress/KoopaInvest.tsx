@@ -232,7 +232,10 @@ const KoopaInvest: FC = () => {
 
   return (
     <div>
-      <button className={`btn-app-default`} onClick={() => startProcess()}>
+      <button
+        className={`btn-app-default ${s.buyKoo}`}
+        onClick={() => startProcess()}
+      >
         Buy Koo
       </button>
       {popupActive && TypeFormComponent()}
