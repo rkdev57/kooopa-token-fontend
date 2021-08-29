@@ -37,10 +37,10 @@ const KoopaInvest: FC = () => {
   // const phaseDeadline = moment("2021-07-26 11:59").format();
 
   const startProcess = () => {
-    /* if (!isWalletConnected()) {
+    if (!isWalletConnected()) {
       return false;
     }
-    setPopupActive(true); */
+    // setPopupActive(true);
     setIsDepositActive(true);
   };
 
