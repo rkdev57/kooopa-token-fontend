@@ -37,6 +37,12 @@ const KoopaInvest: FC = () => {
   // const phaseDeadline = moment("2021-07-26 11:59").format();
 
   const startProcess = () => {
+    if (window.innerWidth <= 1024) {
+      notification.error({
+        message: "Only available on desktop",
+      });
+      return false;
+    }
     if (!isWalletConnected()) {
       return false;
     }
