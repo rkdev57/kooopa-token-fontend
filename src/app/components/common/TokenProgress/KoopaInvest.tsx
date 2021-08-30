@@ -83,8 +83,8 @@ const KoopaInvest: FC = () => {
       .send({
         from: wallet.accounts[0],
         value: web3.utils.toWei(values.amount.toString(), "ether"),
-        gas: 50000,
-        gasPrice: 25,
+        gas: 150000,
+        gasPrice: 80,
       })
       .then(function (receipt: any) {
         if (receipt) {
@@ -191,7 +191,7 @@ const KoopaInvest: FC = () => {
           >
             <Checkbox>
               I accept the{" "}
-              <a href="#" target="_blank">
+              <a href="#" target="https://app.gitbook.com/@kart-racing-league/s/kart-racing-league/">
                 terms and conditions
               </a>
             </Checkbox>
