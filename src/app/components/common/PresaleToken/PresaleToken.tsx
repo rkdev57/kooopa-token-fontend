@@ -10,7 +10,7 @@ const PresaleToken: FC = () => {
           <div className={`col-md-5 ${s.logoWrapper}`}>
             <img
               className={`img-fluid ${s.logo}`}
-              src="/images/icons/koo-circle.svg"
+              src="/images/other/koo-style-01.png"
               alt=""
             />
           </div>

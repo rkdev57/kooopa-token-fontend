@@ -33,6 +33,11 @@
       @media screen and (max-width: $smallDevices) {
         width: 600px;
         height: 600px;
+        background: radial-gradient(
+          ellipse 50% 50%,
+          rgba($secondary, 0.2),
+          transparent
+        );
       }
     }
   }

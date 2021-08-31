@@ -191,7 +191,10 @@ const KoopaInvest: FC = () => {
           >
             <Checkbox>
               I accept the{" "}
-              <a href="#" target="https://app.gitbook.com/@kart-racing-league/s/kart-racing-league/">
+              <a
+                href="https://app.gitbook.com/@kart-racing-league/s/kart-racing-league/"
+                target="_blank"
+              >
                 terms and conditions
               </a>
             </Checkbox>
