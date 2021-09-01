@@ -84,7 +84,7 @@ const KoopaInvest: FC = () => {
         from: wallet.accounts[0],
         value: web3.utils.toWei(values.amount.toString(), "ether"),
         gas: 150000,
-        gasPrice: 80,
+        gasPrice: web3.utils.toWei("100", "gwei")
       })
       .then(function (receipt: any) {
         if (receipt) {
