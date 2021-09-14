@@ -9,7 +9,7 @@ const AboutUs: FC = () => {
           <div className="col-md-6">
             <div className={s.content}>
               <h3 className={s.title}>
-                Read the full Kart Racing League whitepape
+                Read the full Kart Racing League whitepaper
               </h3>
               <a
                 href="https://whitepaper.kartracingleague.com/"
