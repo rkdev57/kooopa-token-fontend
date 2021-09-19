@@ -1,4 +1,5 @@
 const defaultConfig = {
+  endPoint: '',
   typeForm: {
     formId: 'C9AgcxOG',
     cashConnectFormId: 'ga83xeyj',

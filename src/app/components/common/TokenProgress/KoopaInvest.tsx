@@ -13,6 +13,7 @@ import { FC, useEffect, useState } from "react";
 import Web3 from "web3";
 import config from "../../../../config";
 import { useUI } from "../../../contexts/AppContext";
+import { investmentService } from "../../../services";
 import { CashWallet } from "../wallets";
 import { DepositAmountMapper } from "./DepositAmountMapper";
 import { FormRule } from "./FormRule";
@@ -89,6 +90,11 @@ const KoopaInvest: FC = () => {
       .then(function (receipt: any) {
         if (receipt) {
           notification.success({ message: "Amount deposited" });
+          // Trigger your custom api after investment
+          // investmentService.postInvestment({
+          //   userWalletAddress: wallet.accounts[0],
+          //   amount: values.amount
+          // })
         }
         setIsDepositActive(false);
         setIsLoading(false);
