@@ -17,13 +17,13 @@ const PresaleToken: FC = () => {
           <div className="col-md-7 d-flex align-items-center">
             <div className={s.content}>
               <h1 className={s.heading}>
-                <span>KOO</span>, the ERC-20 governance token for the KRL
+                <span>KRL token</span>, the ERC-20 governance token for the KRL
                 Universe
               </h1>
               <p>
-                Holders will shape the future of Kooopa Racing League by
-                signaling their support for upgrades to the ecosystem and
-                directing usage of a Community Treasury.
+                Holders will shape the future of Kart Racing League by signaling
+                their support for upgrades to the ecosystem and directing usage
+                of a Community Treasury.
               </p>
               {/* <span className={s.startingSoon}>
                 KOO Public Sale Round 2 Starting Soon
@@ -51,8 +51,8 @@ const PresaleToken: FC = () => {
             <span className={s.subTitlte}>
               Kart Racing League (KRL) is a fast-paced arcade style kart racing
               NFT game where anyone can earn through skilled gameplay and
-              contributions to the ecosystem. KOO is the glue that binds all KRL
-              community members together.
+              contributions to the ecosystem. KRL token is the glue that binds
+              all KRL community members together.
             </span>
             <a
               href="https://whitepaper.kartracingleague.com/"

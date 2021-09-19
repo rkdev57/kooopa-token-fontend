@@ -112,10 +112,10 @@ const ClaimToken: FC<Props> = ({ onClose }) => {
     <div className={s.container}>
       <div className={s.content}>
         <div className={s.close} onClick={onClose}></div>
-        <h3 className={s.title}>Claim 1500 Kooopa token</h3>
+        <h3 className={s.title}>Claim 1500 KRL token</h3>
         {!isCheckAvailabilty && (
           <div className={s.checkAvailibity}>
-            <span>Check address if it has any claimable Kooopa Token</span>
+            <span>Check address if it has any claimable KRL Token</span>
             <button
               onClick={() => {
                 availabilityPreCheck();

@@ -65,7 +65,7 @@ export const ConnectWallet: FC<Props> = ({
   return (
     <div className={s.walletContainer}>
       <Modal
-        title="Sign In to Kooopa Token"
+        title="Sign In to KRL Token"
         visible={open}
         onCancel={() => onClose()}
         footer={null}

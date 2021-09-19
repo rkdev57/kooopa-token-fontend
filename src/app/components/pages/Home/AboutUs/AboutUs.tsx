@@ -22,9 +22,9 @@ const AboutUs: FC = () => {
           </div>
           <div className="col-md-6">
             <div className={s.content}>
-              <h3 className={s.title}>Review KOO Token contract</h3>
+              <h3 className={s.title}>Review KRL Token contract</h3>
               <a
-                href="https://etherscan.io/token/0xf46b919dd731aeee7244fa63849ed0300cb540fa"
+                href="https://etherscan.io/token/0x034B8b03e6d5B01F0B1cf8B57d1C7f6e2338bCC1"
                 target="_blank"
                 className={`btn-app-default ${s.btnAction}`}
               >

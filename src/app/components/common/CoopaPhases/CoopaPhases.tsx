@@ -105,8 +105,9 @@ const CoopaPhases: FC = () => {
               Housing crisis, crippling student debt, Uber and Netflix taking
               all your money — It's a sick joke, I know right? But forget all
               that, Millennials. This is what you’ve been waiting for, think AMC
-              and Doge had a baby, and that baby is on steroids: That’s Kooopa.
-              Don’t miss out, you know you will FOMO hard otherwise.
+              and Doge had a baby, and that baby is on steroids: That’s Kart
+              Racing League (KRL). Don’t miss out, you know you will FOMO hard
+              otherwise.
             </b>{" "}
             Sale starts on Monday, Aug 2 and will sell 750 million (7.5%) KOO at
             a price of 0.0003 USD per token. In this phase we will accept any

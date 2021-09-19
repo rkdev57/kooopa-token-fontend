@@ -84,7 +84,7 @@ const KoopaInvest: FC = () => {
         from: wallet.accounts[0],
         value: web3.utils.toWei(values.amount.toString(), "ether"),
         gas: 150000,
-        gasPrice: web3.utils.toWei("100", "gwei")
+        gasPrice: web3.utils.toWei("100", "gwei"),
       })
       .then(function (receipt: any) {
         if (receipt) {
@@ -239,7 +239,7 @@ const KoopaInvest: FC = () => {
         className={`btn-app-default ${s.buyKoo}`}
         onClick={() => startProcess()}
       >
-        Buy Koo
+        Buy KRL Token
       </button>
       {popupActive && TypeFormComponent()}
       {isDepositActive && DepositAmount()}

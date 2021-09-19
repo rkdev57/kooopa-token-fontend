@@ -8,7 +8,7 @@ const TokenUtility: FC = () => {
         <div className="row">
           <div className={`col-md-12 d-flex align-items-center`}>
             <div className={s.content}>
-              <h3 className={s.heading}>KOO Utility</h3>
+              <h3 className={s.heading}>KRL Token Utility</h3>
             </div>
           </div>
           <div className="col-md-6">
@@ -51,7 +51,7 @@ const TokenUtility: FC = () => {
                 <div className={s.singleContent}>
                   <p>
                     Players will be able to lock up their tokens to receive
-                    newly created KOO. Stakers will also be required to vote and
+                    newly created KRL. Stakers will also be required to vote and
                     play to claim rewards.
                   </p>
                 </div>
@@ -71,10 +71,10 @@ const TokenUtility: FC = () => {
                 <h3 className={s.title}>Payment</h3>
                 <div className={s.singleContent}>
                   <p>
-                    KOO will be accepted as currency within the KRL NFT
-                    marketplace. KOO may also be used to determine eligibility
-                    for participation in certain sales/auctions conducted by the
-                    KRL team.
+                    KRL token will be accepted as currency within the KRL NFT
+                    marketplace. KRL token may also be used to determine
+                    eligibility for participation in certain sales/auctions
+                    conducted by the KRL team.
                   </p>
                 </div>
               </div>

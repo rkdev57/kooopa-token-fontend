@@ -202,7 +202,7 @@ const TokenProgress: FC = () => {
           <div className="col-md-7">
             <div className={s.content}>
               <span className={`d-block ${s.header}`}>
-                Kooopa Token (KOO) Public Sale Phase 3
+                KRL Token Public Sale Phase 3
               </span>
               <p>Individual Cap 1 ETH = 10,000,000 KOO</p>
 
@@ -243,10 +243,7 @@ const TokenProgress: FC = () => {
 
                 <div className={s.progressBarContainer}>
                   <span className={s.progressBar}>
-                    <span
-                      className={s.bar}
-                      style={{ width: `60%` }}
-                    ></span>
+                    <span className={s.bar} style={{ width: `60%` }}></span>
                     <div
                       className={s.caps}
                       data-label="60% Soft Cap"

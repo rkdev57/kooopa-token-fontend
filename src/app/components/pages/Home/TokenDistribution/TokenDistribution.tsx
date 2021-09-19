@@ -176,12 +176,12 @@ const TokenDistribution: FC = () => {
             <div className="content">
               <h3 className={s.heading}>Token Distribution</h3>
               <p>
-                KOO will be unlocked in a pre-determined schedule which lasts
-                for 36 months from the public sale. The initial circulating
-                supply is set to 3,000,000,000 KOO - 30% of the total supply.
-                The below chart illustrates the maximum possible issuance of KOO
-                over the coming years, and the total supply will never exceed
-                10,000,000,000
+                KRL token will be unlocked in a pre-determined schedule which
+                lasts for 36 months from the public sale. The initial
+                circulating supply is set to 3,000,000,000 KRL token - 30% of
+                the total supply. The below chart illustrates the maximum
+                possible issuance of KRL token over the coming years, and the
+                total supply will never exceed 10,000,000,000
               </p>
               {/* <span className={s.startingSoon}>
                 KOO Public Sale Round 2 Starting Soon
@@ -229,11 +229,11 @@ const TokenDistribution: FC = () => {
           <div className="row">
             <div className="col-md-5">
               <h3 className={s.heading}>
-                KOO <span>Public Sale</span>
+                KRL token <span>Public Sale</span>
               </h3>
               <p>
-                KOO represents a real slice of the KRL game universe as it has
-                governance rights and fee sharing built into it.
+                KRL token represents a real slice of the KRL game universe as it
+                has governance rights and fee sharing built into it.
               </p>
             </div>
             <div className="col-md-7">
