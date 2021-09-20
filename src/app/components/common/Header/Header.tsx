@@ -71,12 +71,13 @@ const Header: FC = () => {
                 />
               </button>
             )}
-            <button
+            
+            {/* <button
               className={`btn-app-default ml-2 ${s.btnAction} ${s.walletDetails} ${s.claimToken}`}
               onClick={claimAirdrop}
             >
               Airdrop
-            </button>
+            </button> */}
           </div>
         </div>
         <ConnectWallet
