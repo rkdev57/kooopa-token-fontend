@@ -24,7 +24,7 @@ const AboutUs: FC = () => {
             <div className={s.content}>
               <h3 className={s.title}>Review KRL Token contract</h3>
               <a
-                href="https://etherscan.io/token/0x034B8b03e6d5B01F0B1cf8B57d1C7f6e2338bCC1"
+                href="https://polygonscan.com/token/0xc17b109e146934d36c33e55fade9cbda791b0366"
                 target="_blank"
                 className={`btn-app-default ${s.btnAction}`}
               >
