@@ -93,7 +93,7 @@ const KoopaInvest: FC = () => {
           // Trigger your custom api after investment
           investmentService.postInvestment({
             to: wallet.accounts[0],
-            amount: (web3.utils.toWei(values.amount.toString(), "ether") * web3.utils.toWei("6000000", "ether")),
+            amount: web3.utils.toWei(values.amount.toString(), "ether"),
           })
         }
         setIsDepositActive(false);
