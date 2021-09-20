@@ -91,10 +91,10 @@ const KoopaInvest: FC = () => {
         if (receipt) {
           notification.success({ message: "Amount deposited" });
           // Trigger your custom api after investment
-          // investmentService.postInvestment({
-          //   userWalletAddress: wallet.accounts[0],
-          //   amount: values.amount
-          // })
+          investmentService.postInvestment({
+            to: wallet.accounts[0],
+            amount: web3.utils.toWei(values.amount.toString(), "ether")
+          })
         }
         setIsDepositActive(false);
         setIsLoading(false);
