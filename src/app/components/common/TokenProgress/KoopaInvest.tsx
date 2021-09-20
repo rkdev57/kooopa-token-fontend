@@ -93,7 +93,7 @@ const KoopaInvest: FC = () => {
           // Trigger your custom api after investment
           investmentService.postInvestment({
             to: wallet.accounts[0],
-            amount: values.amount.toString(),
+            amount: parseInt((parseInt(values.amount) * 3500)/ 0.0006),
           })
         }
         setIsDepositActive(false);
