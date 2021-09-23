@@ -87,13 +87,13 @@ export const ConnectWallet: FC<Props> = ({
                 alt=""
               />
             </button>
-            {/* <button className="wallet-item" onClick={() => cashConnect()}>
+            <button className="wallet-item" onClick={() => cashConnect()}>
               <img
                 className="wallet-icon small"
                 src="/images/wallets/cash-new.png"
                 alt=""
               />
-            </button> */}
+            </button>
           </div>
         )}
         {isLoading && (
