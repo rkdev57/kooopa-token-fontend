@@ -438,18 +438,18 @@ const defaultConfig = {
     infuraId: '487ddc0aad7f47b8a1590a39c8a6bfa8',
   },
   onRamper: {
-    defaultCrypto: 'USDT',
+    defaultCrypto: 'ETH',
     defaultFiat: 'USD',
     defaultAddrs: {
-      USDT: {
-        address: '0x598c702f38bfc96ce804102a8d75fb233e67f318',
+      ETH: {
+        address: '0xd8806d66E24b702e0A56fb972b75D24CAd656821',
       },
     },
     isAddressEditable: false,
     API_KEY: 'pk_prod_OuMEqA83NnO0PIc7CNqFyxZlzbIUAQbAOvIL9aDDh0s0',
-    onlyCryptos: ['USDT'],
+    onlyCryptos: ['ETH'],
     filters: {
-      onlyCryptos: ['USDT'],
+      onlyCryptos: ['ETH'],
       onlyFiat: ['USD'],
     },
   },
