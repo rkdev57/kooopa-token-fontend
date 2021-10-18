@@ -14,6 +14,7 @@ import Web3 from "web3";
 import config from "../../../../config";
 import { useUI } from "../../../contexts/AppContext";
 import { investmentService } from "../../../services";
+import AppConstant from "../../../utility/AppConstant";
 import { CashWallet } from "../wallets";
 import { DepositAmountMapper } from "./DepositAmountMapper";
 import { FormRule } from "./FormRule";
@@ -38,6 +39,14 @@ const KoopaInvest: FC = () => {
   // const phaseDeadline = moment("2021-07-26 11:59").format();
 
   const startProcess = () => {
+    const eth: any = window.ethereum;
+    const AppConstantTemp: any = AppConstant;
+    if (AppConstantTemp.NetworkId[eth.networkVersion] !== "Mainnet") {
+      notification.error({
+        message: `Switch network to Mainnet`,
+      });
+      return false;
+    }
     if (window.innerWidth <= 1024) {
       notification.error({
         message: "Only available on desktop",
@@ -93,8 +102,8 @@ const KoopaInvest: FC = () => {
           // Trigger your custom api after investment
           investmentService.postInvestment({
             to: wallet.accounts[0],
-            amount: ((+values.amount * 3500) / 0.0006).toFixed().toString()
-          })
+            amount: ((+values.amount * 3500) / 0.0006).toFixed().toString(),
+          });
         }
         setIsDepositActive(false);
         setIsLoading(false);
