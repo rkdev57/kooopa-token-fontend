@@ -59,12 +59,12 @@ const Intro: FC = () => {
             <div className="col-md-6">
               <p className="default-text">
                 Kooopa Tiers From the beginning we set out to make the Kooopa
-                public sale as fair as possible, giving participants at each
-                phase an equal shot at a discounted fair price. Depending on
-                when the FOMO kicks in for you, we’ve created four sale phases,
-                each with a different offering to suit you. As the phases go on
-                the discounted price will increase, all before settling at our
-                DEX listing price.
+                pre-sale as fair as possible, giving participants at each phase
+                an equal shot at a discounted fair price. Depending on when the
+                FOMO kicks in for you, we’ve created four sale phases, each with
+                a different offering to suit you. As the phases go on the
+                discounted price will increase, all before settling at our DEX
+                listing price.
               </p>
               <div className="text-center">
                 <a

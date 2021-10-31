@@ -105,7 +105,7 @@ const TokenDistribution: FC = () => {
         "KRL Platform Fund",
         "Blue Monster Games (Core team)",
         "Advisors",
-        "Public Sale",
+        "Pre-sale",
         "Private Sale",
       ],
       colors: Array(7).fill("#ffe124"),
@@ -213,7 +213,7 @@ const TokenDistribution: FC = () => {
                 <li>KRL Platform Fund: 15%</li>
                 <li>Blue Monster Games (Core team): 19%</li>
                 <li>Advisors: 11%</li>
-                <li>Public Sale: 9%</li>
+                <li>Pre-sale: 9%</li>
                 <li>Private Sale: 3.5%</li>
               </div>
               <Chart
@@ -229,7 +229,7 @@ const TokenDistribution: FC = () => {
           <div className="row">
             <div className="col-md-5">
               <h3 className={s.heading}>
-                KRL token <span>Public Sale</span>
+                KRL token <span>Pre-sale</span>
               </h3>
               <p>
                 KRL token represents a real slice of the KRL game universe as it
