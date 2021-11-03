@@ -1,8 +1,10 @@
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
 import TokenProgress, { KoopaInvest } from "../TokenProgress";
 import s from "./PresaleToken.module.scss";
 
 const PresaleToken: FC = () => {
+  const { t } = useTranslation();
   return (
     <div className={s.container}>
       <div className="container">
@@ -17,14 +19,10 @@ const PresaleToken: FC = () => {
           <div className="col-md-7 d-flex align-items-center">
             <div className={s.content}>
               <h1 className={s.heading}>
-                <span>KRL token</span>, the ERC-20 governance token for the KRL
-                Universe
+                <span>{t("KRL token")}</span>,{" "}
+                {t("the ERC-20 governance token for the KRL Universe")}
               </h1>
-              <p>
-                Holders will shape the future of Kart Racing League by signaling
-                their support for upgrades to the ecosystem and directing usage
-                of a Community Treasury.
-              </p>
+              <p>{t("Holders will shape the future...")}</p>
               {/* <span className={s.startingSoon}>
                 KOO Public Sale Round 2 Starting Soon
               </span> */}
@@ -48,18 +46,13 @@ const PresaleToken: FC = () => {
           style={{ backgroundImage: 'url("/images/other/main-banner.png")' }}
         >
           <div className={s.content}>
-            <span className={s.subTitlte}>
-              Kart Racing League (KRL) is a fast-paced arcade style kart racing
-              NFT game where anyone can earn through skilled gameplay and
-              contributions to the ecosystem. KRL token is the glue that binds
-              all KRL community members together.
-            </span>
+            <span className={s.subTitlte}>{t("about_KRL")}</span>
             <a
               href="https://whitepaper.kartracingleague.com/"
               target="_blank"
               className={`btn-app-default ${s.btnAction}`}
             >
-              Read Whitepaper
+              {t("Read Whitepaper")}
             </a>
           </div>
         </div>

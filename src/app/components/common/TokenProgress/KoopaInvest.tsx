@@ -10,6 +10,7 @@ import {
 import Modal from "antd/lib/modal/Modal";
 import moment from "moment";
 import { FC, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import Web3 from "web3";
 import config from "../../../../config";
 import { useUI } from "../../../contexts/AppContext";
@@ -21,6 +22,8 @@ import { FormRule } from "./FormRule";
 import s from "./TokenProgress.module.scss";
 
 const KoopaInvest: FC = () => {
+  const { t } = useTranslation();
+
   const { wallet } = useUI();
   const { Countdown } = Statistic;
   const [form] = Form.useForm();
@@ -40,6 +43,12 @@ const KoopaInvest: FC = () => {
 
   const startProcess = () => {
     const eth: any = window.ethereum;
+    if (!eth) {
+      notification.error({
+        message: `Install metamask`,
+      });
+      return;
+    }
     const AppConstantTemp: any = AppConstant;
     if (AppConstantTemp.NetworkId[eth.networkVersion] !== "Mainnet") {
       notification.error({
@@ -204,13 +213,14 @@ const KoopaInvest: FC = () => {
             valuePropName="checked"
             className={`${s.acceptTerms} accept--tnc`}
           >
+            {/* TODO: Translation */}
             <Checkbox>
-              I accept the{" "}
+              {t("I accept the")}{" "}
               <a
                 href="https://app.gitbook.com/@kart-racing-league/s/kart-racing-league/"
                 target="_blank"
               >
-                terms and conditions
+                {t("terms and conditions")}
               </a>
             </Checkbox>
           </Form.Item>
@@ -254,7 +264,7 @@ const KoopaInvest: FC = () => {
         className={`btn-app-default ${s.buyKoo}`}
         onClick={() => startProcess()}
       >
-        Buy KRL Token
+        {t("Buy KRL Token")}
       </button>
       {popupActive && TypeFormComponent()}
       {isDepositActive && DepositAmount()}

@@ -1,0 +1,64 @@
+{
+  "Connect Wallet": "Conectar monedero",
+  "I accept the": "Acepto el",
+  "terms and conditions": "términos y condiciones",
+  "KRL token": "KRL token",
+  "Pre-sale": "Preventa",
+  "the ERC-20 governance token for the KRL Universe": "el token de gobernanza ERC-20 para el Universo de KRL",
+  "Holders will shape the future...": "Los titulares darán forma al futuro de Kart Racing League al apoyar las actualizaciones del ecosistema y dirigir el uso de un tesoro comunitario.",
+  "Buy KRL Token": "Compra KRL Token",
+  "about_KRL": "Kart Racing League (KRL) es un juego de carreras de karts NFT de estilo arcade de ritmo rápido en el que cualquiera puede ganar a través de una jugabilidad experta y contribuciones al ecosistema. KRL Token es el pegamento que une a todos los miembros de la comunidad de KRL.",
+  "Read Whitepaper": "Lee el Whitepaper",
+  "TokenUtility": {
+    "label": "KRL Token Utility",
+    "E_Sports": {
+      "label": "E-Sports and Tournaments",
+      "description": "Para atraer una amplia gama de jugadores al ecosistema de KRL en la búsqueda de recompensas simbólicas y para otorgar propiedad y participación a los miembros más activos de la comunidad, recompensaremos los comportamientos clave dentro de nuestro ecosistema, tales como:",
+      "items": [
+        "Competir en temporadas",
+        "Ganar Torneos",
+        "Usar el mercado de KRL",
+        "Evolucionar corredores"
+      ]
+    },
+    "Staking": {
+      "label": "Apuesta",
+      "description": "Los jugadores podrán bloquear sus tokens para recibir KRL recién creado. Los Stakers también deberán votar y jugar para reclamar recompensas."
+    },
+    "Payment": {
+      "label": "Pago",
+      "description": "KRL token se aceptará como moneda dentro del mercado KRL NFT. KRL token también se puede utilizar para determinar la elegibilidad para participar en ciertas ventas / subastas realizadas por el equipo de KRL."
+    },
+    "Governance": {
+      "label": "Gobernanza",
+      "description": "A principios de 2022, el Tesoro de la Comunidad se activará y comenzará a recibir los ingresos generados por KRL, así como una parte de las recompensas de participación. Esta tesorería estará gobernada por los stakers de KRL una vez que la red se haya descentralizado lo suficiente."
+    }
+  },
+  "TokenDistribution": {
+    "label": "Distribucion del Token",
+    "description": "KRL token se desbloqueará en un horario predeterminado que dura 36 meses a partir de la venta pública. El suministro circulante inicial se establece en 3.000.000.000 KOO - 30% del suministro total. El siguiente cuadro ilustra la emisión máxima posible de KOO en los próximos años, y el suministro total nunca superará los 10,000,000,000",
+    "items": [
+      "E-Sports y Torneos: 25%",
+      "Recompensas por Staking: 17.5%",
+      "Fondo de la plataforma KRL: 15%",
+      "Juegos de Blue Monster (equipo principal): 19%",
+      "Asesores: 11%",
+      "Preventa: 9%",
+      "Venta Privada: 3.5%"
+    ]
+  },
+  "preSaleDescription": "KRL token representa una parte real del universo de juegos de KRL, ya que tiene derechos de gobernanza y participación en las tarifas incorporados.",
+  "Max Token Supply": "Suministro máximo de tokens",
+  "Initial Token Supply": "Suministro inicial de tokens",
+  "Pre-Sale Allocation": "Asignación previa a la venta",
+  "Token Type": "Tipo de token",
+  "ERC 20 compliant with ERC-655": "ERC 20 compatible con ERC-655",
+  "Pre-Sale Price (USD)": "Precio de preventa (USD)",
+  "Token Distribution": "Distribución de tokens",
+  "Immediately after purchase": "Inmediatamente después de la compra",
+  "Join the KRL group on Telegram": "Únete al grupo de KRL en Telegram",
+  "Join Now": "Únete ahora",
+  "Read the full Kart Racing League whitepaper": "Lea el documento técnico completo de Kart Racing League",
+  "Review KRL Token contract": "Revisar el contrato de KRL Token",
+  "Review Contract": "Revisar contrato"
+}

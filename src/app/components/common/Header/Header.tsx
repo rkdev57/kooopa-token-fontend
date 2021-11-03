@@ -2,10 +2,13 @@ import { notification } from "antd";
 import { FC, useState } from "react";
 import ClaimToken from "../ClaimToken";
 import ConnectWallet from "../ConnectWallet";
+import { useTranslation } from "react-i18next";
 
 import s from "./Header.module.scss";
 
 const Header: FC = () => {
+  const { t } = useTranslation();
+
   const [openConnectWallet, setConnectWallet] = useState(false);
   const [claimToken, setClaimToken] = useState(false);
   const [account, setAccount] = useState("");
@@ -55,7 +58,7 @@ const Header: FC = () => {
                 className={`btn-app-default ${s.btnAction} ${s.connectWallet}`}
                 onClick={connectWallet}
               >
-                Connect Wallet
+                {t("Connect Wallet")}
               </button>
             )}
             {account && (
@@ -71,7 +74,7 @@ const Header: FC = () => {
                 />
               </button>
             )}
-            
+
             {/* <button
               className={`btn-app-default ml-2 ${s.btnAction} ${s.walletDetails} ${s.claimToken}`}
               onClick={claimAirdrop}
